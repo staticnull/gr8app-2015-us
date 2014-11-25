@@ -1,0 +1,10 @@
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+atlassian-ide-plugin.xml
+*.ipr
+*.iml
+*.iws
+

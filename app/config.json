@@ -1,0 +1,85 @@
+{
+    "development": [
+        {
+            "dest": "<%= yeoman.app %>/scripts/config.js",
+            "wrap": "\"use strict\";\n\n <%= __ngModule %>",
+            "name": "config",
+            "constants": {
+                "ENV": "development",
+                "CONFERENCE": {
+                    "id": 1,
+                    "blogUrl": "sbglasius.tumblr.com",
+                    "blogApiKey": "7rXNPh2ZCj2xa12qknvyQyBl1foeXM9q9CThjcQyf3JsTqEZ1I"
+                },
+                "FEATURES": {
+                    "speakers": true,
+                    "talks": true,
+                    "agenda": true,
+                    "blog": true,
+                    "login": true,
+                    "favorites": true,
+                    "ratings": true
+                },
+                "ENDPOINTS": {
+                    "speakers": "http://localhost:8081/gr8conf-cfp/api/speakers/",
+                    "talks": "http://localhost:8081/gr8conf-cfp/api/talks/",
+                    "agenda": "http://localhost:8081/gr8conf-cfp/api/agenda/"
+                },
+                "API": {
+                    "status": "http://localhost:8081/gr8conf-cfp/api2/status/",
+                    "speakers": "http://localhost:8081/gr8conf-cfp/api2/speakers/",
+                    "talks": "http://localhost:8081/gr8conf-cfp/api2/talks/",
+                    "agenda": "http://localhost:8081/gr8conf-cfp/api2/agenda/",
+                    "getCode": "http://localhost:8081/gr8conf-cfp/api/user/code",
+                    "getUser": "http://localhost:8081/gr8conf-cfp/api/user/get",
+                    "loadFavorites":"http://localhost:8081/gr8conf-cfp/api/favorites/get",
+                    "saveFavorite":"http://localhost:8081/gr8conf-cfp/api/favorites/put",
+                    "loadRatings":"http://localhost:8081/gr8conf-cfp/api/ratings/get",
+                    "saveRating":"http://localhost:8081/gr8conf-cfp/api/ratings/put"
+
+                }
+            }
+        }
+    ],
+    "production": [
+        {
+            "dest": "<%= yeoman.dist %>/scripts/config.js",
+            "wrap": "\"use strict\";\n\n <%= __ngModule %>",
+            "name": "config",
+            "constants": {
+                "ENV": "production",
+                "CONFERENCE": {
+                    "id": 1,
+                    "blogUrl": "gr8conf-eu.tumblr.com",
+                    "blogApiKey": "UIYScgdnpAoVWO2EdoADcGAZTAvukDsLEQpX4Zj5AVdL67P4c8"
+                },
+                "FEATURES": {
+                    "speakers": true,
+                    "talks": true,
+                    "agenda": true,
+                    "blog": true,
+                    "login": false ,
+                    "favorites": false,
+                    "ratings": false
+                },
+                "ENDPOINTS": {
+                    "speakers": "http://cfp.gr8conf.org/api/speakers/",
+                    "talks": "http://cfp.gr8conf.org/api/talks/",
+                    "agenda": "http://cfp.gr8conf.org/api/agenda/"
+                },
+                "API": {
+                    "status": "http://cfp.gr8conf.org/api2/status/",
+                    "speakers": "http://cfp.gr8conf.org/api2/speakers/",
+                    "talks": "http://cfp.gr8conf.org/api2/talks/",
+                    "agenda": "http://cfp.gr8conf.org/api2/agenda/",
+                    "getCode": "http://cfp.gr8conf.org/api/user/code",
+                    "getUser": "http://cfp.gr8conf.org/api/user/get",
+                    "loadFavorites":"http://cfp.gr8conf.org/api/favorites/get",
+                    "saveFavorite":"http://cfp.gr8conf.org/api/favorites/put",
+                    "loadRatings":"http://cfp.gr8conf.org/api/ratings/get",
+                    "saveRating":"http://cfp.gr8conf.org/api/ratings/put"
+                }
+            }
+        }
+    ]
+}
