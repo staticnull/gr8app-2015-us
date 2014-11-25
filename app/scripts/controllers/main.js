@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the gr8app2015App
  */
-angular.module('gr8app')
+angular.module('gr8conf2015')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

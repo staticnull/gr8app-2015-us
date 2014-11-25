@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('gr8app', [
+  .module('gr8conf2015', [
     'ngAnimate',
     'ngCookies',
     'ngMessages',
