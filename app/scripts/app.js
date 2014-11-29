@@ -19,14 +19,16 @@ angular
     'ngTouch',
     'config'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider,CONFERENCE) {
+    console.debug(CONFERENCE);
+    var base = 'views/'+CONFERENCE.base;
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: base+'/main.html',
         controller: 'MainCtrl'
       })
       .when('/about', {
-        templateUrl: 'views/about.html',
+        templateUrl: base+'/about.html',
         controller: 'AboutCtrl'
       })
       .otherwise({

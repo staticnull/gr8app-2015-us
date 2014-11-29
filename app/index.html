@@ -33,16 +33,9 @@
   <div class="inner-wrap">
 
     <!--Off-Canvas Menu-->
-    <aside class="left-off-canvas-menu">
+    <aside class="left-off-canvas-menu" ng-controller="MenuCtrl">
       <div class="mobile-navi">
-        <ul>
-          <li class="current"><a class="scrollup" href="#">Home</a></li>
-          <li><a class="scroll" data-offset-top="0" href="#schedule">Schedule</a></li>
-          <li><a class="scroll" data-offset-top="0" href="#testimonials">Testimonials</a></li>
-          <li><a class="scroll" data-offset-top="0" href="#venues">Venues</a></li>
-          <li><a class="scroll" data-offset-top="0" href="#lectors">Lectors</a></li>
-          <li><a class="scroll" data-offset-top="0" href="#contacts">Contacts</a></li>
-        </ul>
+        <div ng-include="menuUrl"></div>
       </div>
     </aside>
     <!--Off-Canvas Menu Close-->
@@ -60,14 +53,17 @@
           <div class="opacity-70">
             <div class="container">
               <div class="row">
-                <div class="col-md-7">
-                  <h1 class="bold-weight uppercase">Kedavra</h1>
+                <div class="col-md-8">
+                  <h1 class="bold-weight uppercase">GR8Conf EU-2015</h1>
 
-                  <h2 class="light-weight">Here goes event name or tagline</h2>
+                  <h2 class="light-weight"><small>Dedicated to the</small>  Groovy Ecosystem</h2>
                 </div>
-                <div class="col-md-5">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud tempor incididunt ut labore et
-                    dolore magna aliqua.</p>
+                <div class="col-md-4">
+                  <p>We feed your brain with all the <strong>important </strong>stuff from the <strong>Groovy</strong> and <strong>Grails</strong> community.</p>
+
+                    <p>We have <strong>in-depth talks</strong> covering all <strong>major technologies</strong> in the Groovy ecosystem.
+                      All talks are performed by the <strong>brightest minds</strong> and <strong>core developers</strong> in their fields.
+                  </p>
                 </div>
               </div>
             </div>
@@ -77,7 +73,7 @@
           <div class="opacity-97 slide-up"><!--Adding Class 'slide-up' hiding content in mobile view and reveal (slide up) content on click-->
             <div class="container">
               <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-8">
                   <!--Countdown-->
                   <div class="countdown smaller light align-left">
                     <div class="timer" id="timer2"></div>
@@ -89,36 +85,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                   <form method="post" name="event-registration" class="light-version">
                     <div class="row">
-                      <div class="col-lg-7">
-                        <div class="form-group">
-                          <label class="sr-only" for="er_name">Name</label>
-                          <input type="text" class="form-control input-lg" name="er_name" id="er_name" placeholder="Name" required>
-                        </div>
-                        <div class="form-group">
-                          <label class="sr-only" for="er_email">Email</label>
-                          <input type="email" class="form-control input-lg" name="er_email" id="er_email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                          <label class="sr-only" for="er_phone">Phone</label>
-                          <input type="text" class="form-control input-lg" name="er_phone" id="er_phone" placeholder="Phone" required>
-                        </div>
-                      </div>
-                      <div class="col-lg-5">
-                        <div class="form-group">
-                          <div class="select-style select-lg">
-                            <select name="er-plan" id="er-plan">
-                              <option>Basic plan</option>
-                              <option>Small business</option>
-                              <option>Corporate plan</option>
-                            </select>
-                          </div>
-                        </div>
-                        <button class="submit-with-price" type="submit">
-                          <span class="price">25 $</span>
-                          <span class="text">Register</span>
+                      <div class="col-lg-8">
+                        <h5>Registration opens soon</h5>
+                        <button class="submit-with-price" disabled="disabled" type="submit">
+                          <span class="text">Register here</span>
                         </button>
                       </div>
                     </div>
@@ -150,22 +123,14 @@
             <!--Site Navigation-->
             <div class="navigation">
               <!--Menu-->
-              <nav class="menu scroll-menu"><!--Add ".scroll-menu" to the <nav> and ".scroll" to <a> to enable scrolling to anchor functionality-->
-                <ul>
-                  <li class="active"><a class="scrollup" href="#">Home</a></li>
-                  <li><a class="scroll" data-offset-top="65" href="#schedule">Schedule</a></li>
-                  <!--data-offset-top means offset of the element from window top in px-->
-                  <li><a class="scroll" data-offset-top="50" href="#testimonials">Testimonials</a></li>
-                  <li><a class="scroll" data-offset-top="55" href="#venues">Venues</a></li>
-                  <li><a class="scroll" data-offset-top="60" href="#lectors">Lectors</a></li>
-                  <li><a class="scroll" data-offset-top="30" href="#contacts">Contacts</a></li>
-                </ul>
+              <nav class="menu scroll-menu" ng-controller="MenuCtrl"><!--Add ".scroll-menu" to the <nav> and ".scroll" to <a> to enable scrolling to anchor functionality-->
+                <div ng-include="menuUrl"></div>
               </nav>
             </div>
 
             <!--Tools-->
             <div class="tools group">
-              <a class="btn btn-primary" href="#">Buy Theme</a>
+              <a class="btn btn-primary" href="#">Login</a>
             </div>
             <!--Tools Close-->
 
@@ -184,7 +149,12 @@
 
       <!--Page Content-->
       <div class="page">
-        <div ng-view=""></div>
+           <section class="page-block space-bottom" id="schedule">
+             <div class="container">
+       <div ng-view=""></div>
+        </div>
+             </section>
+
       </div>
       <!--Page Content Close-->
 
@@ -356,7 +326,7 @@
         <!--Copyright-->
         <div class="copyright">
           <div class="container">
-            <p><a href="http://8guild.com/" target="_blank">8 Guild</a> - Quality premium themes build by creatives</p>
+            <p>GR8Conf - Dedicated to the Groovy Ecosystem</p>
           </div>
         </div>
       </footer>
@@ -476,6 +446,7 @@
 <script src="scripts/kedavra/scripts.js"></script>
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
+<script src="scripts/controllers/menu.js"></script>
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
 <!-- endbuild -->

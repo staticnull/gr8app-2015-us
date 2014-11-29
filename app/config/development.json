@@ -1,7 +1,9 @@
 {
   "CONFERENCE": {
     "id": 3,
+    "base": "eu",
     "blogUrl": "sbglasius.tumblr.com",
     "blogApiKey": "7rXNPh2ZCj2xa12qknvyQyBl1foeXM9q9CThjcQyf3JsTqEZ1I"
+
   }
 }
