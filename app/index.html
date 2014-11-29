@@ -76,7 +76,7 @@
                 <div class="col-md-8">
                   <!--Countdown-->
                   <div class="countdown smaller light align-left">
-                    <div class="timer" id="timer2"></div>
+                    <div class="timer" id="timer2" data-countdown-from="06/02/2015"></div>
                     <div class="group">
                       <span>Days</span>
                       <span>Hours</span>
@@ -88,9 +88,9 @@
                 <div class="col-md-4">
                   <form method="post" name="event-registration" class="light-version">
                     <div class="row">
-                      <div class="col-lg-8">
+                      <div class="col-lg-8 text-center">
                         <h5>Registration opens soon</h5>
-                        <button class="submit-with-price" disabled="disabled" type="submit">
+                        <button class="btn btn-outlined btn-lg btn-default" disabled="disabled" type="submit">
                           <span class="text">Register here</span>
                         </button>
                       </div>
@@ -161,164 +161,21 @@
       <!--Footer-->
       <footer class="footer">
         <div class="container">
-          <div class="row">
+          <div class="row" ng-controller="MenuCtrl">
 
             <!--Featured Posts-->
             <div class="col-md-4 col-sm-4">
-              <h3>Popular posts</h3>
-
-              <div class="featured-post">
-                <h5><a href="#">Omnis iste natus error sit dolor set amet</a></h5>
-                <span class="devider"></span>
-
-                <div class="meta group">
-                  <div class="left">
-                    <a href="#">John Doe</a>
-                    <span class="text-muted">in</span>
-                    <a href="#">Editor Picks</a>
-                  </div>
-                  <div class="right"><span class="text-muted">5 min read</span></div>
-                </div>
-              </div>
-              <div class="featured-post">
-                <h5><a href="#">Lorem ipsum dolor sit amet consectetur</a></h5>
-                <span class="devider"></span>
-
-                <div class="meta group">
-                  <div class="left">
-                    <a href="#">James Roe</a>
-                    <span class="text-muted">in</span>
-                    <a href="#">Most Popular</a>
-                  </div>
-                  <div class="right"><span class="text-muted">10 min read</span></div>
-                </div>
-              </div>
-              <div class="featured-post">
-                <h5><a href="#">Sed ut perspiciatis unde omnis iste natus</a></h5>
-                <span class="devider"></span>
-
-                <div class="meta group">
-                  <div class="left">
-                    <a href="#">Dexter Dirk</a>
-                    <span class="text-muted">in</span>
-                    <a href="#">Tech Reviews</a>
-                  </div>
-                  <div class="right"><span class="text-muted">15 min read</span></div>
-                </div>
-              </div>
-              <div class="featured-post">
-                <h5><a href="#">Omnis iste natus error sit dolor iste</a></h5>
-                <span class="devider"></span>
-
-                <div class="meta group">
-                  <div class="left">
-                    <a href="#">Susanna Davis</a>
-                    <span class="text-muted">in</span>
-                    <a href="#">Financial</a>
-                  </div>
-                  <div class="right"><span class="text-muted">20 min read</span></div>
-                </div>
-              </div>
-              <div class="featured-post">
-                <h5><a href="#">Omnis iste natus error sit dolor set amet</a></h5>
-                <span class="devider"></span>
-
-                <div class="meta group">
-                  <div class="left">
-                    <a href="#">John Doe</a>
-                    <span class="text-muted">in</span>
-                    <a href="#">Editor Picks</a>
-                  </div>
-                  <div class="right"><span class="text-muted">5 min read</span></div>
-                </div>
-              </div>
+              <div ng-include="blogUrl"></div>
             </div>
 
-            <!--Features-->
+            <!--Socials-->
             <div class="col-md-4 col-sm-4">
-              <div class="features">
-                <h3>Features</h3>
-
-                <div class="group">
-                  <div class="pull-left "><i class="icon icon-phone"></i></div>
-                  <div class="pull-left">
-                    <h5><a href="#">Mobile first approach</a></h5>
-
-                    <p>Lorem aute irure dolor elit, sed nulla.</p>
-                  </div>
-                </div>
-                <div class="group">
-                  <div class="pull-left"><i class="icon icon-roller"></i></div>
-                  <div class="pull-left">
-                    <h5><a href="#">Easily customizable</a></h5>
-
-                    <p>Lorem aute irure dolor elit, sed nulla.</p>
-                  </div>
-                </div>
-                <div class="group">
-                  <div class="pull-left"><i class="icon icon-rocket"></i></div>
-                  <div class="pull-left">
-                    <h5><a href="#">Premium plugins included</a></h5>
-
-                    <p>Lorem aute irure dolor elit, sed nulla.</p>
-                  </div>
-                </div>
-                <div class="group">
-                  <div class="pull-left"><i class="icon icon-browser"></i></div>
-                  <div class="pull-left">
-                    <h5><a href="#">Crossbrowser compatibility</a></h5>
-
-                    <p>Lorem aute irure dolor elit, sed nulla.</p>
-                  </div>
-                </div>
-                <div class="group">
-                  <div class="pull-left"><i class="icon icon-university-hat"></i></div>
-                  <div class="pull-left">
-                    <h5><a href="#">Interactive documentation</a></h5>
-
-                    <p>Lorem aute irure dolor elit, sed nulla.</p>
-                  </div>
-                </div>
-              </div>
+              <div ng-include="socialsUrl"></div>
             </div>
 
             <!--Contact Info-->
             <div class="col-md-4 col-sm-4">
-              <div class="contacts">
-                <h3>Contact Info</h3>
-                <h5>Address:</h5>
-
-                <p>105448 Casa Blanca BLVD New York</p>
-                <h5>Phone numbers:</h5>
-
-                <p>+9 876 543 00 21<br/>+0 123 400 56 78</p>
-                <h5>E-mail:</h5>
-
-                <p><a href="mailto:info@your-domain.com">info@your-domain.com</a></p>
-                <h5>Subscribe:</h5>
-                <!-- Begin MailChimp Subscription Form -->
-                <div class="subscribe">
-                  <form class="validate" method="post" action="http://8guild.us3.list-manage1.com/subscribe/post?u=168a366a98d3248fbc35c0b67&amp;id=06b7eb4e02" id="mc-embedded-subscribe-form"
-                        name="mc-embedded-subscribe-form" target="_blank" novalidate>
-                    <label class="sr-only" for="mce-EMAIL"></label>
-                    <input type="email" class="form-control input-lg" name="EMAIL" id="mce-EMAIL" placeholder="Email" required>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_168a366a98d3248fbc35c0b67_06b7eb4e02" tabindex="-1" value=""></div>
-                    <button type="submit" name="mc-embedded-subscribe" id="mc-embedded-subscribe"><i class="fa fa-angle-right"></i></button>
-                  </form>
-                  <!-- End MailChimp Subscription Form -->
-                </div>
-                <h5>Social:</h5>
-
-                <div class="social-bar">
-                  <a href="#" class="tooltipped fa fa-facebook" data-placement="top" title="Facebook"></a>
-                  <a href="#" class="tooltipped fa fa-behance" data-placement="top" title="Behance"></a>
-                  <a href="#" class="tooltipped fa fa-dribbble" data-placement="top" title="Dribbble"></a>
-                  <a href="#" class="tooltipped fa fa-github" data-placement="top" title="Github"></a>
-                  <a href="#" class="tooltipped fa fa-twitter" data-placement="top" title="Twitter"></a>
-                  <a href="#" class="tooltipped fa fa-pinterest" data-placement="top" title="Pinterest"></a>
-                </div>
-              </div>
+              <div ng-include="contactsUrl"></div>
             </div>
           </div>
         </div>

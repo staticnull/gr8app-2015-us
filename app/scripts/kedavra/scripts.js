@@ -415,16 +415,11 @@ jQuery(document).ready(function($) {
 
   /*Countdown Widget
    ************************************************************/
-  // Under Construction Page Timer
-  if($('#timer1').length > 0) {
-    $('#timer1').countdown('2014/12/20', function(event) {
-      $(this).html(event.strftime('%D : %H : %M : %S'));
-    });
-  }
 
   // Event Timer
   if($('#timer2').length > 0) {
-    $('#timer2').countdown('2014/12/20', function(event) {
+    var date = $('#timer2').data('countdown-from');
+    $('#timer2').countdown(date, function(event) {
       $(this).html(event.strftime('%D : %H : %M : %S'));
     });
   }
