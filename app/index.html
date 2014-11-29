@@ -8,33 +8,394 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+  <link rel="stylesheet" href="bower_components/lightgallery/light-gallery/css/lightGallery.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5DLwPPVAz88_k0yO2nmFe7T9k1urQs84"></script>
+  <!--Modernizr-->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+
 </head>
-<body ng-app="gr8conf2015">
-<!--[if lt IE 7]>
+<!--[if lt IE 9>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
+<body ng-app="gr8conf2015">
+<!--Body-->
+<body class="parallax animated fadeIn"><!--Add "parallax" class if you have elements on the page with parallax backgrounds. "fadeIn" class makes content fades in on loading-->
 
-<!-- Add your site or application content here -->
-<div class="container">
-  <div class="header">
-    <ul class="nav nav-pills pull-right">
-      <li class="active"><a ng-href="#">Home</a></li>
-      <li><a ng-href="#/about">About</a></li>
-      <li><a ng-href="#">Contact</a></li>
-    </ul>
-    <h3 class="text-muted">gr8app2015</h3>
+<!--Off-Canvas-->
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+    <!--Off-Canvas Menu-->
+    <aside class="left-off-canvas-menu">
+      <div class="mobile-navi">
+        <ul>
+          <li class="current"><a class="scrollup" href="#">Home</a></li>
+          <li><a class="scroll" data-offset-top="0" href="#schedule">Schedule</a></li>
+          <li><a class="scroll" data-offset-top="0" href="#testimonials">Testimonials</a></li>
+          <li><a class="scroll" data-offset-top="0" href="#venues">Venues</a></li>
+          <li><a class="scroll" data-offset-top="0" href="#lectors">Lectors</a></li>
+          <li><a class="scroll" data-offset-top="0" href="#contacts">Contacts</a></li>
+        </ul>
+      </div>
+    </aside>
+    <!--Off-Canvas Menu Close-->
+
+    <!--Layout-->
+    <div class="site-layout">
+      <!--If you add class "boxed" to .site-layout it wraps the whole document in a box, than you can simply add pattern background to body or leave it white. Please note in a "boxed" mode header doesn't stick to the top.-->
+
+      <!--Fullscreen Hero-->
+      <!--Adding class "fullscreen" makes hero height equals window height-->
+      <section style="background-image:url(images/event.jpg);" class="hero-static fullscreen no-space-bottom" data-stellar-background-ratio="0.5">
+
+        <!--Event Info Block-->
+        <div class="overlay-block">
+          <div class="opacity-70">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7">
+                  <h1 class="bold-weight uppercase">Kedavra</h1>
+
+                  <h2 class="light-weight">Here goes event name or tagline</h2>
+                </div>
+                <div class="col-md-5">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+                </div>
+              </div>
+            </div>
+            <!--Slide Up Toggle-->
+            <div id="slide-up-toggle"><i class="fa fa-angle-double-down"></i></div>
+          </div>
+          <div class="opacity-97 slide-up"><!--Adding Class 'slide-up' hiding content in mobile view and reveal (slide up) content on click-->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7">
+                  <!--Countdown-->
+                  <div class="countdown smaller light align-left">
+                    <div class="timer" id="timer2"></div>
+                    <div class="group">
+                      <span>Days</span>
+                      <span>Hours</span>
+                      <span>Minutes</span>
+                      <span>Seconds</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <form method="post" name="event-registration" class="light-version">
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <div class="form-group">
+                          <label class="sr-only" for="er_name">Name</label>
+                          <input type="text" class="form-control input-lg" name="er_name" id="er_name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="er_email">Email</label>
+                          <input type="email" class="form-control input-lg" name="er_email" id="er_email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="er_phone">Phone</label>
+                          <input type="text" class="form-control input-lg" name="er_phone" id="er_phone" placeholder="Phone" required>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group">
+                          <div class="select-style select-lg">
+                            <select name="er-plan" id="er-plan">
+                              <option>Basic plan</option>
+                              <option>Small business</option>
+                              <option>Corporate plan</option>
+                            </select>
+                          </div>
+                        </div>
+                        <button class="submit-with-price" type="submit">
+                          <span class="price">25 $</span>
+                          <span class="text">Register</span>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!--Fullscreen Hero Close-->
+
+      <!--Header-->
+      <!--Scroller header is for one page layouts where navigation links are anchors to the relevant section of the page.
+      Please note in a "boxed" mode header doesn't stick to the top.-->
+      <header class="header scroller">
+        <div class="inner">
+          <div class="container group">
+
+            <!--Logo-->
+            <a class="logo" href="index.html"><img src="images/logo.png" alt="Kedavra"/></a>
+
+            <!--Navigation Toggle-->
+            <div class="left-off-canvas-toggle" id="nav-toggle">
+              <span></span>
+            </div>
+
+            <!--Site Navigation-->
+            <div class="navigation">
+              <!--Menu-->
+              <nav class="menu scroll-menu"><!--Add ".scroll-menu" to the <nav> and ".scroll" to <a> to enable scrolling to anchor functionality-->
+                <ul>
+                  <li class="active"><a class="scrollup" href="#">Home</a></li>
+                  <li><a class="scroll" data-offset-top="65" href="#schedule">Schedule</a></li>
+                  <!--data-offset-top means offset of the element from window top in px-->
+                  <li><a class="scroll" data-offset-top="50" href="#testimonials">Testimonials</a></li>
+                  <li><a class="scroll" data-offset-top="55" href="#venues">Venues</a></li>
+                  <li><a class="scroll" data-offset-top="60" href="#lectors">Lectors</a></li>
+                  <li><a class="scroll" data-offset-top="30" href="#contacts">Contacts</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!--Tools-->
+            <div class="tools group">
+              <a class="btn btn-primary" href="#">Buy Theme</a>
+            </div>
+            <!--Tools Close-->
+
+          </div>
+        </div>
+
+        <!--Quick Search-->
+        <form class="quick-search" method="get" autocomplete="off">
+          <div class="overlay"></div>
+          <input class="search-field" type="text" placeholder="Search">
+          <span>Press enter to search</span>
+        </form>
+
+      </header>
+      <!--Header Close-->
+
+      <!--Page Content-->
+      <div class="page">
+        <div ng-view=""></div>
+      </div>
+      <!--Page Content Close-->
+
+      <!--Footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+
+            <!--Featured Posts-->
+            <div class="col-md-4 col-sm-4">
+              <h3>Popular posts</h3>
+
+              <div class="featured-post">
+                <h5><a href="#">Omnis iste natus error sit dolor set amet</a></h5>
+                <span class="devider"></span>
+
+                <div class="meta group">
+                  <div class="left">
+                    <a href="#">John Doe</a>
+                    <span class="text-muted">in</span>
+                    <a href="#">Editor Picks</a>
+                  </div>
+                  <div class="right"><span class="text-muted">5 min read</span></div>
+                </div>
+              </div>
+              <div class="featured-post">
+                <h5><a href="#">Lorem ipsum dolor sit amet consectetur</a></h5>
+                <span class="devider"></span>
+
+                <div class="meta group">
+                  <div class="left">
+                    <a href="#">James Roe</a>
+                    <span class="text-muted">in</span>
+                    <a href="#">Most Popular</a>
+                  </div>
+                  <div class="right"><span class="text-muted">10 min read</span></div>
+                </div>
+              </div>
+              <div class="featured-post">
+                <h5><a href="#">Sed ut perspiciatis unde omnis iste natus</a></h5>
+                <span class="devider"></span>
+
+                <div class="meta group">
+                  <div class="left">
+                    <a href="#">Dexter Dirk</a>
+                    <span class="text-muted">in</span>
+                    <a href="#">Tech Reviews</a>
+                  </div>
+                  <div class="right"><span class="text-muted">15 min read</span></div>
+                </div>
+              </div>
+              <div class="featured-post">
+                <h5><a href="#">Omnis iste natus error sit dolor iste</a></h5>
+                <span class="devider"></span>
+
+                <div class="meta group">
+                  <div class="left">
+                    <a href="#">Susanna Davis</a>
+                    <span class="text-muted">in</span>
+                    <a href="#">Financial</a>
+                  </div>
+                  <div class="right"><span class="text-muted">20 min read</span></div>
+                </div>
+              </div>
+              <div class="featured-post">
+                <h5><a href="#">Omnis iste natus error sit dolor set amet</a></h5>
+                <span class="devider"></span>
+
+                <div class="meta group">
+                  <div class="left">
+                    <a href="#">John Doe</a>
+                    <span class="text-muted">in</span>
+                    <a href="#">Editor Picks</a>
+                  </div>
+                  <div class="right"><span class="text-muted">5 min read</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!--Features-->
+            <div class="col-md-4 col-sm-4">
+              <div class="features">
+                <h3>Features</h3>
+
+                <div class="group">
+                  <div class="pull-left "><i class="icon icon-phone"></i></div>
+                  <div class="pull-left">
+                    <h5><a href="#">Mobile first approach</a></h5>
+
+                    <p>Lorem aute irure dolor elit, sed nulla.</p>
+                  </div>
+                </div>
+                <div class="group">
+                  <div class="pull-left"><i class="icon icon-roller"></i></div>
+                  <div class="pull-left">
+                    <h5><a href="#">Easily customizable</a></h5>
+
+                    <p>Lorem aute irure dolor elit, sed nulla.</p>
+                  </div>
+                </div>
+                <div class="group">
+                  <div class="pull-left"><i class="icon icon-rocket"></i></div>
+                  <div class="pull-left">
+                    <h5><a href="#">Premium plugins included</a></h5>
+
+                    <p>Lorem aute irure dolor elit, sed nulla.</p>
+                  </div>
+                </div>
+                <div class="group">
+                  <div class="pull-left"><i class="icon icon-browser"></i></div>
+                  <div class="pull-left">
+                    <h5><a href="#">Crossbrowser compatibility</a></h5>
+
+                    <p>Lorem aute irure dolor elit, sed nulla.</p>
+                  </div>
+                </div>
+                <div class="group">
+                  <div class="pull-left"><i class="icon icon-university-hat"></i></div>
+                  <div class="pull-left">
+                    <h5><a href="#">Interactive documentation</a></h5>
+
+                    <p>Lorem aute irure dolor elit, sed nulla.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Contact Info-->
+            <div class="col-md-4 col-sm-4">
+              <div class="contacts">
+                <h3>Contact Info</h3>
+                <h5>Address:</h5>
+
+                <p>105448 Casa Blanca BLVD New York</p>
+                <h5>Phone numbers:</h5>
+
+                <p>+9 876 543 00 21<br/>+0 123 400 56 78</p>
+                <h5>E-mail:</h5>
+
+                <p><a href="mailto:info@your-domain.com">info@your-domain.com</a></p>
+                <h5>Subscribe:</h5>
+                <!-- Begin MailChimp Subscription Form -->
+                <div class="subscribe">
+                  <form class="validate" method="post" action="http://8guild.us3.list-manage1.com/subscribe/post?u=168a366a98d3248fbc35c0b67&amp;id=06b7eb4e02" id="mc-embedded-subscribe-form"
+                        name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                    <label class="sr-only" for="mce-EMAIL"></label>
+                    <input type="email" class="form-control input-lg" name="EMAIL" id="mce-EMAIL" placeholder="Email" required>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_168a366a98d3248fbc35c0b67_06b7eb4e02" tabindex="-1" value=""></div>
+                    <button type="submit" name="mc-embedded-subscribe" id="mc-embedded-subscribe"><i class="fa fa-angle-right"></i></button>
+                  </form>
+                  <!-- End MailChimp Subscription Form -->
+                </div>
+                <h5>Social:</h5>
+
+                <div class="social-bar">
+                  <a href="#" class="tooltipped fa fa-facebook" data-placement="top" title="Facebook"></a>
+                  <a href="#" class="tooltipped fa fa-behance" data-placement="top" title="Behance"></a>
+                  <a href="#" class="tooltipped fa fa-dribbble" data-placement="top" title="Dribbble"></a>
+                  <a href="#" class="tooltipped fa fa-github" data-placement="top" title="Github"></a>
+                  <a href="#" class="tooltipped fa fa-twitter" data-placement="top" title="Twitter"></a>
+                  <a href="#" class="tooltipped fa fa-pinterest" data-placement="top" title="Pinterest"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Copyright-->
+        <div class="copyright">
+          <div class="container">
+            <p><a href="http://8guild.com/" target="_blank">8 Guild</a> - Quality premium themes build by creatives</p>
+          </div>
+        </div>
+      </footer>
+      <!--Footer Close-->
+
+    </div>
+    <!--Layout Close-->
+
+    <!-- close the off-canvas menu -->
+    <a class="exit-off-canvas"></a>
   </div>
+</div>
+<!--Off-Canvas Close-->
 
-  <div ng-view=""></div>
+<!--Sticky Buttons-->
+<div class="sticky-btns">
+  <form class="quick-contact" method="post" name="quick-contact">
+    <h3>Contact us</h3>
 
-  <div class="footer">
-    <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-  </div>
+    <div class="form-group">
+      <label for="qc-name">Full name</label>
+      <input class="form-control" type="text" name="qc-name" id="qc-name" placeholder="Enter full name" required>
+    </div>
+    <div class="form-group">
+      <label for="qc-email">Email</label>
+      <input class="form-control" type="email" name="qc-email" id="qc-email" placeholder="Enter email" required>
+    </div>
+    <div class="form-group">
+      <label for="qc-message">Your message</label>
+      <textarea class="form-control" name="qc-message" id="qc-message" placeholder="Enter your message" required></textarea>
+    </div>
+    <input class="btn btn-primary btn-block" type="submit" value="Send">
+  </form>
+  <span id="qcf-btn"><i class="fa fa-envelope"></i></span>
+  <span id="scrollTop-btn"><i class="fa fa-chevron-up"></i></span>
+</div>
+<!--Sticky Buttons Close-->
+
+
 </div>
 
 
@@ -67,18 +428,6 @@
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-messages/angular-messages.js"></script>
@@ -86,10 +435,45 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/raf.js/raf.js"></script>
+<script src="bower_components/smoothscroll/dist/smoothscroll.js"></script>
+<script src="bower_components/jquery-easing/jquery.easing.js"></script>
+<script src="bower_components/jquery-easing/jquery.easing.min.js"></script>
+<script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+<script src="bower_components/spriteOnHover/plugin/jquery.spriteOnHover-0.2.5.js"></script>
+<script src="bower_components/iCheck/icheck.min.js"></script>
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+<script src="bower_components/foundation/js/foundation.js"></script>
+<script src="bower_components/jquery.validate/dist/jquery.validate.js"></script>
+<script src="bower_components/jquery-waypoints/waypoints.js"></script>
+<script src="bower_components/jquery.parallax/jquery.parallax.js"></script>
+<script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
+<script src="bower_components/jquery.countdown/dist/jquery.countdown.min.js"></script>
+<script src="bower_components/lightgallery/light-gallery/js/lightGallery.min.js"></script>
+<script src="bower_components/get-style-property/get-style-property.js"></script>
+<script src="bower_components/get-size/get-size.js"></script>
+<script src="bower_components/matches-selector/matches-selector.js"></script>
+<script src="bower_components/eventie/eventie.js"></script>
+<script src="bower_components/doc-ready/doc-ready.js"></script>
+<script src="bower_components/eventEmitter/EventEmitter.js"></script>
+<script src="bower_components/outlayer/item.js"></script>
+<script src="bower_components/outlayer/outlayer.js"></script>
+<script src="bower_components/masonry/masonry.js"></script>
+<script src="bower_components/isotope/js/item.js"></script>
+<script src="bower_components/isotope/js/layout-mode.js"></script>
+<script src="bower_components/isotope/js/isotope.js"></script>
+<script src="bower_components/isotope/js/layout-modes/vertical.js"></script>
+<script src="bower_components/isotope/js/layout-modes/fit-rows.js"></script>
+<script src="bower_components/isotope/js/layout-modes/masonry.js"></script>
+<script src="bower_components/jquery.stellar/jquery.stellar.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
+<script src="bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>
 
 <script src="scripts/config.js"></script>
+<script src="scripts/kedavra/scripts.js"></script>
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main.js"></script>
