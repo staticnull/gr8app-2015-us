@@ -25,13 +25,27 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: base+'/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        active: 'main'
+      })
+      .when('/venue', {
+        templateUrl: base+'/venue.html',
+        controller: 'VenueCtrl',
+        active: 'venue'
+
       })
       .when('/about', {
         templateUrl: base+'/about.html',
-        controller: 'AboutCtrl'
+        controller: 'AboutCtrl',
+        active: 'about'
       })
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function($rootScope) {
+    $rootScope.activeMenu = 'main';
+    $rootScope.$on( "$routeChangeStart", function(event, next) {
+
+    });
   });

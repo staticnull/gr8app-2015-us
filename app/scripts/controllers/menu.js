@@ -10,6 +10,7 @@
 angular.module('gr8conf2015')
   .controller('MenuCtrl', function ($scope, CONFERENCE) {
     $scope.menuUrl = 'views/'+CONFERENCE.base+"/templates/menu.html";
+    $scope.eventUrl = 'views/'+CONFERENCE.base+"/templates/event.html";
     $scope.blogUrl = 'views/'+CONFERENCE.base+"/templates/blog.html";
     $scope.socialsUrl = 'views/'+CONFERENCE.base+"/templates/socials.html";
     $scope.contactsUrl = 'views/'+CONFERENCE.base+"/templates/contacts.html";

@@ -1,0 +1,28 @@
+.venue-map {
+  height: 300px;
+  padding: 0;
+
+  .map {
+    &.embed-container {
+      position: relative;
+      #map-notice {
+        position:absolute;
+        width: 100%;
+        text-align: center;
+        bottom:20px;
+        background-color: rgba(0,0,0,.50);
+        color: #ccc;
+        padding: 8px;
+      }
+      .map-overlay{
+        height:100%;
+        width:100%;
+        position:absolute;
+        z-index:9999;
+        background-color:rgba(0,0,0,0.1);
+      }
+    }
+
+  }
+
+}

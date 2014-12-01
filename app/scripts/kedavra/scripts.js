@@ -12,20 +12,20 @@ jQuery(document).ready(function($) {
    *******************************************/
   /// Header / Navigation Variables------------------------------------
   var $header = $('.header');
-  var $headerToolbar = $('.header-toolbar');
+
   var $stickyHeader = $('.header.sticky');
   var $scrollHeader = $('.header.scroller');
   var $transpHeader = $('.header.transparent');
   var $cartBtn = $('.header .cart-btn');
-  var $menuItem = $('.menu ul li');
+
   var $naviToggle = $('#nav-toggle');
   var $exitOffCanv = $('.exit-off-canvas');
   var $megaSubmLink = $('.mega-menu .has-submenu a');
   var $megaSubmenu = $('.mega-menu .mega-submenu');
-  var $megaMenu = $('.mega-menu');
+
   var $mobSubmenuToggle = $('.mobile-navi ul li span');
   var $mobButtonsToggle = $('.mobile-navi .buttons li > a');
-  var $cartCarousel = $('.cart-dropdown .owl-carousel');
+
   var $cartPromo = $('.cart-dropdown .promo-code');
   var $cartPromoInput = $('.promo-code input[type="text"]');
   var $searchBtn = $('.header .search');
@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
   /// Hero Units Variables--------------------------------------------
   var $heroFs = $('.hero-static.fullscreen');
   var $heroFsInner = $('.hero-static.fullscreen .inner');
-  var $heroParallax = $('.hero-parallax')
+  var $heroParallax = $('.hero-parallax');
   /// ----------------------------------------------------------------
 
   /// Forms Variables-------------------------------------------------
@@ -42,11 +42,9 @@ jQuery(document).ready(function($) {
   var $scrollTopBtn = $('#scrollTop-btn');
   var $qcfBtn = $('#qcf-btn');
   var $qsForm = $('.header .quick-search');
-  var $contForm = $('.contact-form');
   var $loginForm = $('.login-form');
   var $signupForm = $('.signup-form');
   var $accountSetForm = $('.account-settings');
-  var $mailAddressForm = $('form[name="mailing-address"]');
   var $mailAddressForm = $('form[name="mailing-address"]');
   var $billAddressForm = $('form[name="billing-address"]');
   var $subscrWidgetForm = $('.sidebar .subscribe form');
@@ -64,7 +62,7 @@ jQuery(document).ready(function($) {
   var $tooltip = $('.tooltipped');
   var $percentChart = $('.percent-chart');
   var $lightGallery = $('.lightGallery');
-  var $logoCarousel = $('.logo-carousel');
+
   var $sidebarBtn = $('.sidebar-button');
   var $shareBar = $('.share-modal .bar');
   var $infoClose = $('.info-string .close');
@@ -75,8 +73,8 @@ jQuery(document).ready(function($) {
   var $shareBtn = $('.item footer .tools .share-btn');
   var $clearChecks = $('.clearChecks');
   var $purchHistToggle = $('.shop-history .panel-heading a');
-  var $packageCarousel = $('.package-carousel');
-  var $scItemDelete = $('.shopping-cart .item .delete');
+
+
   var $interactiveCard = $('.card-fields');
   /// ----------------------------------------------------------------
 
@@ -166,21 +164,6 @@ jQuery(document).ready(function($) {
     }
   });
 
-  /*Mobile Navigation
-   *******************************************/
-  //Breakpoints
-  //$.breakpoint({
-  //  condition: function () {
-  //    return window.matchMedia('only screen and (max-width:1024px)').matches;
-  //  },
-  //  exit: function () {
-  //    $(window).scrollTop(50); //Topper Issue fix on resize
-  //    $exitOffCanv.trigger('click', function(){
-  //      $naviToggle.removeClass('active');
-  //    });
-  //  }
-  //});
-
   //Submenu Toggles
   $mobSubmenuToggle.click(function(){
     if($(this).parent().hasClass('active')) {
@@ -211,39 +194,12 @@ jQuery(document).ready(function($) {
   });
 
 
-  /*Cart Dropdown
-   *******************************************/
-  //Items Carousel
-  //$cartCarousel.owlCarousel({
-  //  margin: 10,
-  //  loop: false,
-  //  dots: false,
-  //  navText: [
-  //    '<div class="arr01"></div><div class="arr02"></div>',
-  //    '<div class="arr03"></div><div class="arr04"></div>'
-  //  ],
-  //  responsive:{
-  //    0:{
-  //      items: 1,
-  //      nav: true
-  //    },
-  //    600:{
-  //      items: 3,
-  //      nav: false
-  //    },
-  //    1000:{
-  //      items: 3,
-  //      nav: true
-  //    }
-  //  }
-  //});
-
   //Add(+/-) Button Number Incrementers
   $(".incr-btn").on("click", function(e) {
     var $button = $(this);
     var oldValue = $button.parent().find('.quantity').val();
     $button.parent().find('.incr-btn[data-action="decrease"]').removeClass('inactive');
-    if ($button.data('action') == "increase") {
+    if ($button.data('action') === "increase") {
       var newVal = parseFloat(oldValue) + 1;
     } else {
       // Don't allow decrementing below 1
@@ -428,8 +384,8 @@ jQuery(document).ready(function($) {
    ************************************************************/
   if($('#datePicker').length > 0) {
     $('#datePicker').datepicker().on('changeDate', function(e){
-      $('#chosen_date').val(e.format('dd/mm/yyyy'))
-    });;
+      $('#chosen_date').val(e.format('dd/mm/yyyy'));
+    });
     $('.datepicker .prev').html('<i class="fa fa-angle-left"></i>');
     $('.datepicker .next').html('<i class="fa fa-angle-right"></i>');
   }
@@ -652,23 +608,6 @@ jQuery(document).ready(function($) {
     $(this).parent().addClass('current');
   });
 
-  // Initialize isotope
-  //var $gallGridMassonry = $('.gallery-grid.masonry');
-  //$gallGridMassonry.isotope({
-  //  itemSelector: '.item',
-  //  masonry: {
-  //    columnWidth: '.grid-sizer'
-  //  }
-  //});
-  //
-  //// filter items when filter link is clicked
-  //$('.filters a').click(function(){
-  //  var selector = $(this).attr('data-filter');
-  //  $gallGridMassonry.isotope({
-  //    filter: selector
-  //  });
-  //  return false;
-  //});
 
 
   ///////////////////////////////////////////////////////////////////////
@@ -888,184 +827,8 @@ jQuery(document).ready(function($) {
         responsive: true
       });
     }
-  }
+  };
 
-  ///////////////////////////////////////////////////////////////////////
-  /////////////////// Sliders & Carousels  /////////////////////////////
-  //////////////////////////////////////////////////////////////////////
-
-  /*Fullscreen Hero Slider
-   ************************************************/
-  //var fs_slider = new MasterSlider();
-  //
-  //fs_slider.control("arrows", {autohide:true});
-  //fs_slider.setup("fs-slider", {
-  //  width:1024,
-  //  height:768,
-  //  centerControls: false,
-  //  layout:"fullscreen",
-  //  preload: 'all',
-  //  loop:true,
-  //  speed:20
-  //});
-
-
-  /*Partial View Slider
-   ************************************************/
-  //var partView = new MasterSlider();
-  //
-  //partView.control('arrows');
-  //partView.control('slideinfo',{insertTo:"#partial-view" , autohide:false, align:'bottom', size:160});
-  //partView.control('circletimer' , {color:"#FFFFFF" , stroke:9});
-  //
-  //partView.setup('slider01' , {
-  //  width:760,
-  //  height:400,
-  //  space:10,
-  //  loop:true,
-  //  view:'partialWave',
-  //  layout:'partialview'
-  //});
-  //
-  /*Fullwidth Partial View Slider
-   ************************************************/
-  //var fsPartView = new MasterSlider();
-  //
-  //fsPartView.control('arrows');
-  //fsPartView.control('slideinfo',{insertTo:"#fs-partial-view-info" , autohide:false, align:'bottom', size:160});
-  //fsPartView.control('circletimer' , {color:"#FFFFFF" , stroke:9});
-  //
-  //fsPartView.setup('fs-partial-view' , {
-  //  width: 760,
-  //  height: 400,
-  //  space: 10,
-  //  loop: true,
-  //  view: 'fadeFlow',
-  //  layout: 'partialview'
-  //});
-
-  /*Display Slider
-   ************************************************/
-  //var slider = new MasterSlider();
-  //slider.setup('masterslider' , {
-  //  width: 507,
-  //  height: 286,
-  //  speed: 20,
-  //  preload: 0,
-  //  space: 2,
-  //  view: 'flow'
-  //});
-  //slider.control('arrows');
-  //slider.control('bullets',{autohide:false});
-
-  /*Staff 3D Carousel
-   ************************************************/
-  //var staffCar = new MasterSlider();
-  //
-  //staffCar.setup('slider02' , {
-  //  loop:true,
-  //  width:240,
-  //  height:240,
-  //  speed:20,
-  //  view:'wave',
-  //  preload:0,
-  //  space:0
-  //});
-  //staffCar.control('arrows');
-  //staffCar.control('slideinfo',{insertTo:'#staff-info'});
-
-  /*Product Showcase Slider
-   ************************************************/
-  //var showcaseSlider = new MasterSlider();
-  //showcaseSlider.setup('showcase-slider' , {
-  //  width:1024 ,
-  //  height:580,
-  //  space:0,
-  //  fillMode:'fit',
-  //  speed:25,
-  //  preload:'all',
-  //  view:'flow',
-  //  loop:true
-  //});
-
-  //showcaseSlider.control('arrows', {autohide:false});
-  //showcaseSlider.control('bullets', {autohide:false, align:'bottom', margin:-30});
-
-  /*Logos Carousel
-   ************************************************/
-  //var $autoplay = $logoCarousel.data('auto-play');
-  //var $timeout = $logoCarousel.data('timeout');
-  //$logoCarousel.owlCarousel({
-  //  loop: true,
-  //  dots: false,
-  //  nav: false,
-  //  autoplay: $autoplay,
-  //  autoplayTimeout: $timeout,
-  //  responsive:{
-  //    0:{
-  //      items: 2,
-  //    },
-  //    600:{
-  //      items: 3,
-  //    },
-  //    1000:{
-  //      items: 4,
-  //    }
-  //  }
-  //});
-
-  /*Portfolio Single Slider
-   ************************************************/
-  //var portfolioSlider = new MasterSlider();
-  //portfolioSlider.setup('portfolioSlider' , {
-  //  width:800,    // slider standard width
-  //  height:840,   // slider standard height
-  //  space:5,
-  //  view: "flow"
-  //  // more slider options goes here...
-  //  // check slider options section in documentation for more options.
-  //});
-  //// adds Arrows navigation control to the slider.
-  //portfolioSlider.control('arrows');
-  //portfolioSlider.control('bullets', {autohide:false});
-
-  /*Post Single Slider
-   ************************************************/
-  //var postSlider = new MasterSlider();
-  //postSlider.setup('postSlider' , {
-  //  width:750,    // slider standard width
-  //  height:480,   // slider standard height
-  //  space:5
-  //});
-  //// adds Arrows navigation control to the slider.
-  //postSlider.control('arrows');
-  //postSlider.control('bullets', {autohide:false});
-
-  /*Single Product Slider
-   ************************************************/
-  //var spSlider = new MasterSlider();
-  //spSlider.control('thumblist' , {autohide:false ,dir:'h',arrows:false, align:'bottom', width:120, height:130, margin:5, space:0});
-  //spSlider.setup('spSlider' , {
-  //  width:750,
-  //  height:714,
-  //  space:0,
-  //  view:'scale'
-  //});
-
-  /*Goods Package Carousel
-   ************************************************/
-  //if($packageCarousel.length > 0){
-  //  $packageCarousel.owlCarousel({
-  //    margin:0,
-  //    loop:true,
-  //    items: 1,
-  //    nav: true,
-  //    navText: [
-  //      '<div class="arr01"></div><div class="arr02"></div>',
-  //      '<div class="arr03"></div><div class="arr04"></div>'
-  //    ]
-  //  });
-  //}
 
   ///////////////////////////////////////////////////////////////////////
   /////////  INTERNAL ANCHOR LINKS SCROLLING (NAVIGATION)  //////////////
@@ -1079,6 +842,7 @@ jQuery(document).ready(function($) {
   });
   $('.scrollup').click(function(e){
     e.preventDefault();
+    console.debug("scrollup", e);
     $('html, body').animate({scrollTop : 0}, {duration: 700, easing:'easeOutExpo'});
     $naviToggle.removeClass('active');
   });

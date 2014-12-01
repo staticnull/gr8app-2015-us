@@ -8,9 +8,9 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
-  <link rel="stylesheet" href="bower_components/lightgallery/light-gallery/css/lightGallery.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
+  <link rel="stylesheet" href="bower_components/lightgallery/light-gallery/css/lightGallery.css"/>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -24,9 +24,8 @@
 <!--[if lt IE 9>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<body ng-app="gr8conf2015">
+<body ng-app="gr8conf2015" class="parallax animated fadeIn"><!--Add "parallax" class if you have elements on the page with parallax backgrounds. "fadeIn" class makes content fades in on loading-->
 <!--Body-->
-<body class="parallax animated fadeIn"><!--Add "parallax" class if you have elements on the page with parallax backgrounds. "fadeIn" class makes content fades in on loading-->
 
 <!--Off-Canvas-->
 <div class="off-canvas-wrap" data-offcanvas>
@@ -51,22 +50,7 @@
         <!--Event Info Block-->
         <div class="overlay-block">
           <div class="opacity-70">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-8">
-                  <h1 class="bold-weight uppercase">GR8Conf EU-2015</h1>
-
-                  <h2 class="light-weight"><small>Dedicated to the</small>  Groovy Ecosystem</h2>
-                </div>
-                <div class="col-md-4">
-                  <p>We feed your brain with all the <strong>important </strong>stuff from the <strong>Groovy</strong> and <strong>Grails</strong> community.</p>
-
-                    <p>We have <strong>in-depth talks</strong> covering all <strong>major technologies</strong> in the Groovy ecosystem.
-                      All talks are performed by the <strong>brightest minds</strong> and <strong>core developers</strong> in their fields.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <div ng-include="eventUrl" ng-controller="MenuCtrl"></div>
             <!--Slide Up Toggle-->
             <div id="slide-up-toggle"><i class="fa fa-angle-double-down"></i></div>
           </div>
@@ -113,7 +97,7 @@
           <div class="container group">
 
             <!--Logo-->
-            <a class="logo" href="index.html"><img src="images/logo.png" alt="Kedavra"/></a>
+            <a class="logo scrollup" ng-href="#/"><img src="images/logo.png" alt="Kedavra"/></a>
 
             <!--Navigation Toggle-->
             <div class="left-off-canvas-toggle" id="nav-toggle">
@@ -149,12 +133,7 @@
 
       <!--Page Content-->
       <div class="page">
-           <section class="page-block space-bottom" id="schedule">
-             <div class="container">
-       <div ng-view=""></div>
-        </div>
-             </section>
-
+        <div ng-view=""></div>
       </div>
       <!--Page Content Close-->
 
@@ -221,9 +200,6 @@
   <span id="scrollTop-btn"><i class="fa fa-chevron-up"></i></span>
 </div>
 <!--Sticky Buttons Close-->
-
-
-</div>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -305,7 +281,10 @@
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/menu.js"></script>
 <script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/venue.js"></script>
 <script src="scripts/controllers/about.js"></script>
+<script src="scripts/services/menuservice.js"></script>
+<script src="scripts/directives/mapclick.js"></script>
 <!-- endbuild -->
 </body>
 </html>
