@@ -8,9 +8,9 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
-  <link rel="stylesheet" href="bower_components/lightgallery/light-gallery/css/lightGallery.css"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+  <link rel="stylesheet" href="bower_components/lightgallery/light-gallery/css/lightGallery.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -26,7 +26,7 @@
 <![endif]-->
 <body ng-app="gr8conf2015" class="parallax animated fadeIn"><!--Add "parallax" class if you have elements on the page with parallax backgrounds. "fadeIn" class makes content fades in on loading-->
 <!--Body-->
-
+<div id="top"></div>
 <!--Off-Canvas-->
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
@@ -97,7 +97,7 @@
           <div class="container group">
 
             <!--Logo-->
-            <a class="logo scrollup" ng-href="#/"><img src="images/logo.png" alt="Kedavra"/></a>
+            <a class="logo" scroll-to="top" ng-href="#/"><img src="images/logo.png" alt="Kedavra"/></a>
 
             <!--Navigation Toggle-->
             <div class="left-off-canvas-toggle" id="nav-toggle">
@@ -114,7 +114,7 @@
 
             <!--Tools-->
             <div class="tools group">
-              <a class="btn btn-primary" href="#">Login</a>
+              <a class="btn btn-primary disabled" href="#">Login</a>
             </div>
             <!--Tools Close-->
 
@@ -132,7 +132,7 @@
       <!--Header Close-->
 
       <!--Page Content-->
-      <div class="page">
+      <div id="page" class="page">
         <div ng-view=""></div>
       </div>
       <!--Page Content Close-->
@@ -239,8 +239,6 @@
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/raf.js/raf.js"></script>
-<script src="bower_components/smoothscroll/dist/smoothscroll.js"></script>
 <script src="bower_components/jquery-easing/jquery.easing.js"></script>
 <script src="bower_components/jquery-easing/jquery.easing.min.js"></script>
 <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
@@ -271,6 +269,7 @@
 <script src="bower_components/isotope/js/layout-modes/fit-rows.js"></script>
 <script src="bower_components/isotope/js/layout-modes/masonry.js"></script>
 <script src="bower_components/jquery.stellar/jquery.stellar.js"></script>
+<script src="bower_components/ngSmoothScroll/angular-smooth-scroll.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 <script src="bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>

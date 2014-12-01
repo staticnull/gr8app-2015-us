@@ -834,18 +834,19 @@ jQuery(document).ready(function($) {
   /////////  INTERNAL ANCHOR LINKS SCROLLING (NAVIGATION)  //////////////
   //////////////////////////////////////////////////////////////////////
 
-  $(".scroll").click(function(event){
-    var $elemOffsetTop = $(this).data('offset-top');
-    $('html, body').animate({scrollTop:$(this.hash).offset().top-$elemOffsetTop}, 1000, 'easeOutExpo');
-    $naviToggle.removeClass('active');
-    event.preventDefault();
-  });
-  $('.scrollup').click(function(e){
-    e.preventDefault();
-    console.debug("scrollup", e);
-    $('html, body').animate({scrollTop : 0}, {duration: 700, easing:'easeOutExpo'});
-    $naviToggle.removeClass('active');
-  });
+  //$(".scroll").click(function(event){
+  //  var $elemOffsetTop = $('.navigation').offset();
+  //  console.debug("Navi offset:",$elemOffsetTop);
+  //  $('html, body').animate({scrollTop:$elemOffsetTop}, 1000, 'easeOutExpo');
+  //  $naviToggle.removeClass('active');
+  //  event.preventDefault();
+  //});
+  //$('.scrollup').click(function(e){
+  //  e.preventDefault();
+  //  console.debug("scrollup", e);
+  //  $('html, body').animate({scrollTop : 0}, {duration: 700, easing:'easeOutExpo'});
+  //  $naviToggle.removeClass('active');
+  //});
 
 
   $(window).scroll(function(){

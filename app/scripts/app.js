@@ -17,35 +17,35 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'smoothScroll',
     'config'
   ])
-  .config(function ($routeProvider,CONFERENCE) {
+  .config(function ($routeProvider, CONFERENCE) {
     console.debug(CONFERENCE);
-    var base = 'views/'+CONFERENCE.base;
+    var base = 'views/' + CONFERENCE.base;
     $routeProvider
       .when('/', {
-        templateUrl: base+'/main.html',
+        templateUrl: base + '/main.html',
+        controller: 'MainCtrl',
+        active: 'main'
+      })
+      .when('/main', {
+        templateUrl: base + '/main.html',
         controller: 'MainCtrl',
         active: 'main'
       })
       .when('/venue', {
-        templateUrl: base+'/venue.html',
+        templateUrl: base + '/venue.html',
         controller: 'VenueCtrl',
         active: 'venue'
 
       })
       .when('/about', {
-        templateUrl: base+'/about.html',
+        templateUrl: base + '/about.html',
         controller: 'AboutCtrl',
         active: 'about'
       })
       .otherwise({
         redirectTo: '/'
       });
-  })
-  .run(function($rootScope) {
-    $rootScope.activeMenu = 'main';
-    $rootScope.$on( "$routeChangeStart", function(event, next) {
-
-    });
   });
