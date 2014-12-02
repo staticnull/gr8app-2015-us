@@ -25,27 +25,39 @@ angular
     var base = 'views/' + CONFERENCE.base;
     $routeProvider
       .when('/', {
-        templateUrl: base + '/main.html',
-        controller: 'MainCtrl',
-        active: 'main'
+        templateUrl: base + '/front.html',
+        controller: 'FrontCtrl',
+        scroll: 'top'
       })
-      .when('/main', {
-        templateUrl: base + '/main.html',
-        controller: 'MainCtrl',
-        active: 'main'
+      .when('/front', {
+        templateUrl: base + '/front.html',
+        controller: 'FrontCtrl',
+        scroll: 'page'
       })
       .when('/venue', {
         templateUrl: base + '/venue.html',
         controller: 'VenueCtrl',
-        active: 'venue'
+        scroll: 'page'
 
       })
       .when('/about', {
         templateUrl: base + '/about.html',
         controller: 'AboutCtrl',
-        active: 'about'
+        scroll: 'page'
       })
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function($rootScope, smoothScroll, CONFERENCE) {
+    $rootScope.scrollToTop = function() {
+      var element = document.getElementById('page');
+      smoothScroll(element);
+    };
+    $rootScope.menuUrl = 'views/'+CONFERENCE.base+"/templates/menu.html";
+    $rootScope.eventUrl = 'views/'+CONFERENCE.base+"/templates/event.html";
+    $rootScope.blogUrl = 'views/'+CONFERENCE.base+"/templates/blog.html";
+    $rootScope.socialsUrl = 'views/'+CONFERENCE.base+"/templates/socials.html";
+    $rootScope.contactsUrl = 'views/'+CONFERENCE.base+"/templates/contacts.html";
+
   });

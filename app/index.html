@@ -8,9 +8,9 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
-  <link rel="stylesheet" href="bower_components/lightgallery/light-gallery/css/lightGallery.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
+  <link rel="stylesheet" href="bower_components/lightgallery/light-gallery/css/lightGallery.css"/>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -32,7 +32,7 @@
   <div class="inner-wrap">
 
     <!--Off-Canvas Menu-->
-    <aside class="left-off-canvas-menu" ng-controller="MenuCtrl">
+    <aside class="left-off-canvas-menu">
       <div class="mobile-navi">
         <div ng-include="menuUrl"></div>
       </div>
@@ -50,14 +50,14 @@
         <!--Event Info Block-->
         <div class="overlay-block">
           <div class="opacity-70">
-            <div ng-include="eventUrl" ng-controller="MenuCtrl"></div>
+            <div ng-include="eventUrl"></div>
             <!--Slide Up Toggle-->
             <div id="slide-up-toggle"><i class="fa fa-angle-double-down"></i></div>
           </div>
           <div class="opacity-97 slide-up"><!--Adding Class 'slide-up' hiding content in mobile view and reveal (slide up) content on click-->
             <div class="container">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-9">
                   <!--Countdown-->
                   <div class="countdown smaller light align-left">
                     <div class="timer" id="timer2" data-countdown-from="06/02/2015"></div>
@@ -69,16 +69,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <form method="post" name="event-registration" class="light-version">
-                    <div class="row">
-                      <div class="col-lg-8 text-center">
                         <h5>Registration opens soon</h5>
                         <button class="btn btn-outlined btn-lg btn-default" disabled="disabled" type="submit">
                           <span class="text">Register here</span>
                         </button>
-                      </div>
-                    </div>
                   </form>
                 </div>
               </div>
@@ -97,7 +93,7 @@
           <div class="container group">
 
             <!--Logo-->
-            <a class="logo" scroll-to="top" ng-href="#/"><img src="images/logo.png" alt="Kedavra"/></a>
+            <a class="logo" scroll-to="top" href><img src="images/logo.png" alt="Kedavra"/></a>
 
             <!--Navigation Toggle-->
             <div class="left-off-canvas-toggle" id="nav-toggle">
@@ -107,7 +103,7 @@
             <!--Site Navigation-->
             <div class="navigation">
               <!--Menu-->
-              <nav class="menu scroll-menu" ng-controller="MenuCtrl"><!--Add ".scroll-menu" to the <nav> and ".scroll" to <a> to enable scrolling to anchor functionality-->
+              <nav class="menu scroll-menu"><!--Add ".scroll-menu" to the <nav> and ".scroll" to <a> to enable scrolling to anchor functionality-->
                 <div ng-include="menuUrl"></div>
               </nav>
             </div>
@@ -140,7 +136,7 @@
       <!--Footer-->
       <footer class="footer">
         <div class="container">
-          <div class="row" ng-controller="MenuCtrl">
+          <div class="row">
 
             <!--Featured Posts-->
             <div class="col-md-4 col-sm-4">
@@ -197,7 +193,7 @@
     <input class="btn btn-primary btn-block" type="submit" value="Send">
   </form>
   <span id="qcf-btn"><i class="fa fa-envelope"></i></span>
-  <span id="scrollTop-btn"><i class="fa fa-chevron-up"></i></span>
+  <span id="scrollTop-btn" scroll-to="top"><i class="fa fa-chevron-up"></i></span>
 </div>
 <!--Sticky Buttons Close-->
 
@@ -279,7 +275,7 @@
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/menu.js"></script>
-<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/front.js"></script>
 <script src="scripts/controllers/venue.js"></script>
 <script src="scripts/controllers/about.js"></script>
 <script src="scripts/services/menuservice.js"></script>

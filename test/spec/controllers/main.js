@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: FrontCtrl', function () {
 
   // load the controller's module
   beforeEach(module('gr8app2015App'));

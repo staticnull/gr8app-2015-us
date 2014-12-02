@@ -8,6 +8,6 @@
  * Controller of the gr8app2015App
  */
 angular.module('gr8conf2015')
-  .controller('MainCtrl', function ($scope, ENV) {
+  .controller('FrontCtrl', function ($scope, ENV) {
     console.debug(ENV);
   });

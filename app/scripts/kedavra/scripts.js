@@ -915,9 +915,6 @@ jQuery(document).ready(function($) {
       $scrollTopBtn.parent().removeClass('scrolled');
     }
   });
-  $scrollTopBtn.click(function(){
-    $('html, body').animate({scrollTop : 0}, {duration: 700, easing:'easeOutExpo'});
-  });
 
   //Quick Contact Form
   $qcfBtn.click(function(){
