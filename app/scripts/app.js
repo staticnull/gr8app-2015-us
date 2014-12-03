@@ -54,6 +54,8 @@ angular
       var element = document.getElementById('page');
       smoothScroll(element);
     };
+    $rootScope.eventImageUrl = 'images/'+CONFERENCE.base+"/event.jpg";
+    $rootScope.logoImageUrl = 'images/'+CONFERENCE.base + "/logo.png";
     $rootScope.menuUrl = 'views/'+CONFERENCE.base+"/templates/menu.html";
     $rootScope.eventUrl = 'views/'+CONFERENCE.base+"/templates/event.html";
     $rootScope.blogUrl = 'views/'+CONFERENCE.base+"/templates/blog.html";

@@ -8,9 +8,9 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
-  <link rel="stylesheet" href="bower_components/lightgallery/light-gallery/css/lightGallery.css"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+  <link rel="stylesheet" href="bower_components/lightgallery/light-gallery/css/lightGallery.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -45,7 +45,7 @@
 
       <!--Fullscreen Hero-->
       <!--Adding class "fullscreen" makes hero height equals window height-->
-      <section style="background-image:url(images/event.jpg);" class="hero-static fullscreen no-space-bottom" data-stellar-background-ratio="0.5">
+      <section style="background-image:url({{eventImageUrl}});" class="hero-static fullscreen no-space-bottom" data-stellar-background-ratio="0.5">
 
         <!--Event Info Block-->
         <div class="overlay-block">
@@ -93,7 +93,7 @@
           <div class="container group">
 
             <!--Logo-->
-            <a class="logo" scroll-to="top" href><img src="images/logo.png" alt="Kedavra"/></a>
+            <a class="logo" scroll-to="top" href><img src="{{logoImageUrl}}" alt="GR8Conf"/></a>
 
             <!--Navigation Toggle-->
             <div class="left-off-canvas-toggle" id="nav-toggle">
