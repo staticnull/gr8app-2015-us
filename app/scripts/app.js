@@ -49,17 +49,17 @@ angular
         redirectTo: '/'
       });
   })
-  .run(function($rootScope, smoothScroll, CONFERENCE) {
+  .run(['$rootScope', 'smoothScroll','CONFERENCE', function($rootScope, smoothScroll, CONFERENCE) {
     $rootScope.scrollToTop = function() {
       var element = document.getElementById('page');
       smoothScroll(element);
     };
-    $rootScope.eventImageUrl = 'images/'+CONFERENCE.base+"/event.jpg";
-    $rootScope.logoImageUrl = 'images/'+CONFERENCE.base + "/logo.png";
+    $rootScope.eventImageCss = 'event-'+CONFERENCE.base;
+    $rootScope.logoUrl = 'views/'+CONFERENCE.base + "/templates/logo.html";
     $rootScope.menuUrl = 'views/'+CONFERENCE.base+"/templates/menu.html";
     $rootScope.eventUrl = 'views/'+CONFERENCE.base+"/templates/event.html";
     $rootScope.blogUrl = 'views/'+CONFERENCE.base+"/templates/blog.html";
     $rootScope.socialsUrl = 'views/'+CONFERENCE.base+"/templates/socials.html";
     $rootScope.contactsUrl = 'views/'+CONFERENCE.base+"/templates/contacts.html";
 
-  });
+  }]);

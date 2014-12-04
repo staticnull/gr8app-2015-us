@@ -45,7 +45,7 @@
 
       <!--Fullscreen Hero-->
       <!--Adding class "fullscreen" makes hero height equals window height-->
-      <section style="background-image:url({{eventImageUrl}});" class="hero-static fullscreen no-space-bottom" data-stellar-background-ratio="0.5">
+      <section class="hero-static fullscreen no-space-bottom {{eventImageCss}}" data-stellar-background-ratio="0.5">
 
         <!--Event Info Block-->
         <div class="overlay-block">
@@ -93,8 +93,7 @@
           <div class="container group">
 
             <!--Logo-->
-            <a class="logo" scroll-to="top" href><img src="{{logoImageUrl}}" alt="GR8Conf"/></a>
-
+            <div ng-include="logoUrl"></div>
             <!--Navigation Toggle-->
             <div class="left-off-canvas-toggle" id="nav-toggle">
               <span></span>
