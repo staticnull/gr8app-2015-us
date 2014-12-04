@@ -139,7 +139,7 @@ module.exports = function (grunt) {
         all: {
           src: [
             'Gruntfile.js',
-            '<%= yeoman.app %>/scripts/{,*/}*.js',
+            '<%= yeoman.app %>/scripts/**/{,*/}*.js',
             '.tmp/scripts/{,*/}*.js'
           ]
         },
@@ -186,51 +186,16 @@ module.exports = function (grunt) {
         app: {
           src: ['<%= yeoman.app %>/index.html'],
           ignorePath: /\.\.\//
-        },
-        //less: {
-        //  src: ['<%= yeoman.app %>/less/styles.less']
-        //}
-        //,
-        //sass: {
-        //  src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        //  ignorePath: /(\.\.\/){1,2}bower_components\//
-        //}
+        }
       },
 
-      //// Compiles Sass to CSS and generates necessary files if requested
-      //compass: {
-      //  options: {
-      //    sassDir: '<%= yeoman.app %>/styles',
-      //    cssDir: '.tmp/styles',
-      //    generatedImagesDir: '.tmp/images/generated',
-      //    imagesDir: '<%= yeoman.app %>/images',
-      //    javascriptsDir: '<%= yeoman.app %>/scripts',
-      //    fontsDir: '<%= yeoman.app %>/styles/fonts',
-      //    importPath: './bower_components',
-      //    httpImagesPath: '/images',
-      //    httpGeneratedImagesPath: '/images/generated',
-      //    httpFontsPath: '/styles/fonts',
-      //    relativeAssets: false,
-      //    assetCacheBuster: false,
-      //    raw: 'Sass::Script::Number.precision = 10\n'
-      //  },
-      //  dist: {
-      //    options: {
-      //      generatedImagesDir: '<%= yeoman.dist %>/images/generated'
-      //    }
-      //  },
-      //  server: {
-      //    options: {
-      //      debugInfo: true
-      //    }
-      //  }
-      //},
 
       // Renames files for browser caching purposes
       filerev: {
         dist: {
           src: [
-            '<%= yeoman.dist %>/scripts/{,*/}*.js',
+            '<%= yeoman.dist %>/scripts/**/{,*/}*.js',
+            '<%= yeoman.dist %>/bower_components/**/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
             '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/styles/fonts/*'
@@ -259,45 +224,13 @@ module.exports = function (grunt) {
 
       // Performs rewrites based on filerev and the useminPrepare configuration
       usemin: {
-        html: ['<%= yeoman.dist %>/{,*/}*.html'],
+        html: ['<%= yeoman.dist %>/**/{,*/}*.html'],
         css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
         options: {
           assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images']
         }
       },
 
-      // The following *-min tasks will produce minified files in the dist folder
-      // By default, your `index.html`'s <!-- Usemin block --> will take care of
-      // minification. These next options are pre-configured if you do not wish
-      // to use the Usemin blocks.
-      // cssmin: {
-      //   dist: {
-      //     files: {
-      //       '<%= yeoman.dist %>/styles/main.css': [
-      //         '.tmp/styles/{,*/}*.css'
-      //       ]
-      //     }
-      //   }
-      // },
-      // uglify: {
-      //   dist: {
-      //     files: {
-      //       '<%= yeoman.dist %>/scripts/scripts.js': [
-      //         '<%= yeoman.dist %>/scripts/scripts.js'
-      //       ]
-      //     }
-      //   }
-      // },
-      //concat: {
-      //  options: {
-      //    separator: ';'
-      //  },
-      //  dist: {
-      //    src: ['<%= yeoman.app %>/scripts/{,*/}*.js',
-      //          '.tmp/scripts/{,*/}*.js'],
-      //    dest: 'dist/built.js'
-      //  }
-      //},
       imagemin: {
         dist: {
           files: [{
@@ -332,7 +265,7 @@ module.exports = function (grunt) {
           files: [{
             expand: true,
             cwd: '<%= yeoman.dist %>',
-            src: ['*.html', 'views/{,*/}*.html'],
+            src: ['*.html', 'views/**/{,*/}*.html'],
             dest: '<%= yeoman.dist %>'
           }]
         }
@@ -345,7 +278,7 @@ module.exports = function (grunt) {
           files: [{
             expand: true,
             cwd: '.tmp/concat/scripts',
-            src: ['*.js', '!oldieshim.js'],
+            src: ['*.js', '!oldieshim.js','!kedavra.js'],
             dest: '.tmp/concat/scripts'
           }]
         }
@@ -370,7 +303,7 @@ module.exports = function (grunt) {
               '*.{ico,png,txt}',
               '.htaccess',
               '*.html',
-              'views/{,*/}*.html',
+              'views/**/{,*/}*.html',
               'images/{,*/}*.{webp}',
               'fonts/{,*/}*.*'
             ]

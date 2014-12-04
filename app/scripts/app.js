@@ -48,8 +48,9 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  })
-  .run(['$rootScope', 'smoothScroll','CONFERENCE', function($rootScope, smoothScroll, CONFERENCE) {
+  });
+angular
+  .module('gr8conf2015').run(['$rootScope', 'smoothScroll','CONFERENCE', function($rootScope, smoothScroll, CONFERENCE) {
     $rootScope.scrollToTop = function() {
       var element = document.getElementById('page');
       smoothScroll(element);

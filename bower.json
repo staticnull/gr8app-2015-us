@@ -12,7 +12,6 @@
     "angular-route": "^1.3.0",
     "angular-sanitize": "^1.3.0",
     "angular-touch": "^1.3.0",
-    "angular-modernizr": "*",
     "jquery": ">= 2.1.0",
     "bootstrap": "~3.3.1",
     "jquery-easing": "*",
@@ -22,13 +21,13 @@
     "foundation": "~5.4.7",
     "jquery.validate": "~1.13.0",
     "jquery-waypoints": "~2.0.5",
+    "ngSmoothScroll": "~1.7.1",
     "owl.carousel": "*",
     "jquery.parallax": "~1.1.3",
     "jquery.countdown": "~2.0.4",
     "lightgallery": "~1.1.4",
     "isotope": "~2.1.0",
-    "jquery.stellar": "~0.6.2",
-    "ngSmoothScroll": "~1.7.1"
+    "jquery.stellar": "~0.6.2"
   },
   "devDependencies": {
     "angular-mocks": "~1.3.0",

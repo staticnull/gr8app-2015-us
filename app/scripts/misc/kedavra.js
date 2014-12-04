@@ -4,7 +4,7 @@
  *All scripts for Kedavra HTML5 Multipurpose Template
  */
 
-/*Document Ready*////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+;
 jQuery(document).ready(function($) {
   'use strict';
 
@@ -926,7 +926,7 @@ jQuery(document).ready(function($) {
     $qcForm.removeClass('visible');
   });
 
-});/*Document Ready End*//////////////////////////////////////////////////////////////////////////
+});
 
 /*Back Function: Manipulating the browser history
  *************************************************/

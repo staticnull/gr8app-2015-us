@@ -18,8 +18,9 @@
   <!-- endbuild -->
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5DLwPPVAz88_k0yO2nmFe7T9k1urQs84"></script>
   <!--Modernizr-->
+  <!-- build:js(.) scripts/modernizr.js -->
   <script src="bower_components/modernizr/modernizr.js"></script>
-
+  <!-- endbuild -->
 </head>
 <!--[if lt IE 9>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -244,6 +245,7 @@
 <script src="bower_components/foundation/js/foundation.js"></script>
 <script src="bower_components/jquery.validate/dist/jquery.validate.js"></script>
 <script src="bower_components/jquery-waypoints/waypoints.js"></script>
+<script src="bower_components/ngSmoothScroll/angular-smooth-scroll.js"></script>
 <script src="bower_components/jquery.parallax/jquery.parallax.js"></script>
 <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
 <script src="bower_components/jquery.countdown/dist/jquery.countdown.min.js"></script>
@@ -264,13 +266,11 @@
 <script src="bower_components/isotope/js/layout-modes/fit-rows.js"></script>
 <script src="bower_components/isotope/js/layout-modes/masonry.js"></script>
 <script src="bower_components/jquery.stellar/jquery.stellar.js"></script>
-<script src="bower_components/ngSmoothScroll/angular-smooth-scroll.js"></script>
 <!-- endbower -->
-<!-- endbuild -->
 <script src="bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>
+<!-- endbuild -->
 
 <script src="scripts/config.js"></script>
-<script src="scripts/kedavra/scripts.js"></script>
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/menu.js"></script>
@@ -280,5 +280,9 @@
 <script src="scripts/services/menuservice.js"></script>
 <script src="scripts/directives/mapclick.js"></script>
 <!-- endbuild -->
+<!-- build:js({.tmp,app}) scripts/kedavra_dist.js -->
+<script src="scripts/misc/kedavra.js"></script>
+<!-- endbuild -->
+
 </body>
 </html>
