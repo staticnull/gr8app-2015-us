@@ -60,7 +60,15 @@ iframe {
 .page-block {
 	width: 100%;
 	padding: (@vert-gap*1.5) 0 @vert-gap 0;
+
 	@media @tablet-port { padding: @vert-gap 0 (@vert-gap*0.8) 0; }
+}
+
+.page{
+    background-size: cover;
+    background-image: url("/images/background.png");
+    background-position: 0 0px;
+    background-attachment: fixed;
 }
 
 //--All Images responsive
@@ -86,7 +94,7 @@ img {
 	margin-top: @vert-gap;
 	@media @tablet-port { margin-top: (@vert-gap*0.8); }
 }
-.space-bottom { 
+.space-bottom {
 	margin-bottom: @vert-gap;
 	@media @tablet-port { margin-bottom: (@vert-gap*0.8); }
 }
