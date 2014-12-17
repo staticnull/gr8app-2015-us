@@ -8,6 +8,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/revolunet-angular-carousel/dist/angular-carousel.css" />
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
   <link rel="stylesheet" href="bower_components/lightgallery/light-gallery/css/lightGallery.css" />
@@ -25,7 +26,7 @@
 <!--[if lt IE 9>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<body ng-app="gr8conf2015" class="parallax animated fadeIn"><!--Add "parallax" class if you have elements on the page with parallax backgrounds. "fadeIn" class makes content fades in on loading-->
+<body ng-app="gr8conf2015" class="animated fadeIn"><!--Add "parallax" class if you have elements on the page with parallax backgrounds. "fadeIn" class makes content fades in on loading-->
 <!--Body-->
 <div id="top"></div>
 <!--Off-Canvas-->
@@ -46,7 +47,7 @@
 
       <!--Fullscreen Hero-->
       <!--Adding class "fullscreen" makes hero height equals window height-->
-      <section class="hero-static fullscreen no-space-bottom {{eventImageCss}}" data-stellar-background-ratio="0.5">
+      <section class="hero-static fullscreen no-space-bottom {{eventImageCss}}" parallax-background parallax-ratio="-0.4">
 
         <!--Event Info Block-->
         <div class="overlay-block">
@@ -128,7 +129,7 @@
       <!--Header Close-->
 
       <!--Page Content-->
-      <div id="page" class="page">
+      <div id="page" class="page" parallax-background parallax-ratio="0.1">
         <div ng-view=""></div>
       </div>
       <!--Page Content Close-->
@@ -234,6 +235,9 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-parallax/scripts/angular-parallax.js"></script>
+<script src="bower_components/revolunet-angular-carousel/dist/angular-carousel.js"></script>
+<script src="bower_components/ngSmoothScroll/angular-smooth-scroll.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/jquery-easing/jquery.easing.js"></script>
 <script src="bower_components/jquery-easing/jquery.easing.min.js"></script>
@@ -245,8 +249,6 @@
 <script src="bower_components/foundation/js/foundation.js"></script>
 <script src="bower_components/jquery.validate/dist/jquery.validate.js"></script>
 <script src="bower_components/jquery-waypoints/waypoints.js"></script>
-<script src="bower_components/ngSmoothScroll/angular-smooth-scroll.js"></script>
-<script src="bower_components/jquery.parallax/jquery.parallax.js"></script>
 <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
 <script src="bower_components/jquery.countdown/dist/jquery.countdown.min.js"></script>
 <script src="bower_components/lightgallery/light-gallery/js/lightGallery.min.js"></script>

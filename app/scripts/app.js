@@ -18,6 +18,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'smoothScroll',
+    'angular-parallax',
     'config'
   ])
   .config(function ($routeProvider, CONFERENCE) {

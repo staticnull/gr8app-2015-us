@@ -64,11 +64,13 @@ iframe {
 	@media @tablet-port { padding: @vert-gap 0 (@vert-gap*0.8) 0; }
 }
 
-.page{
-    background-size: cover;
-    background-image: url("/images/background.png");
-    background-position: 0 0px;
-    background-attachment: fixed;
+.page {
+  background-position: center top;
+  background-repeat: repeat-y;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background-image: url("/images/background.png");
+  background-attachment: fixed;
 }
 
 //--All Images responsive

@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
   /// Hero Units Variables--------------------------------------------
   var $heroFs = $('.hero-static.fullscreen');
   var $heroFsInner = $('.hero-static.fullscreen .inner');
-  var $heroParallax = $('.hero-parallax');
+
   /// ----------------------------------------------------------------
 
   /// Forms Variables-------------------------------------------------
@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
   var $bookingForm = $('form[name="booking-form"]');
   var $eventRegistr = $('form[name="event-registration"]');
   var $signInForm = $('form[name="signin-form"]');
-  var $checkoutForm = $('form[name="checkout"]');
+
   var $updateSubscribe = $('form[name="update-subscribe-form"]');
   /// ----------------------------------------------------------------
 
@@ -68,21 +68,6 @@ jQuery(document).ready(function($) {
   var $infoClose = $('.info-string .close');
   var $bannerClose = $('.info-block .close');
   /// ----------------------------------------------------------------
-
-  /// Shop Variables------------------------------------------
-  var $shareBtn = $('.item footer .tools .share-btn');
-  var $clearChecks = $('.clearChecks');
-  var $purchHistToggle = $('.shop-history .panel-heading a');
-
-
-  var $interactiveCard = $('.card-fields');
-  /// ----------------------------------------------------------------
-
-  /// User Account Variables------------------------------------------
-  var $editPass = $('.account-settings .pass-block .edit-btn');
-  var $closePass = $('.account-settings .pass-block .close');
-  /// ----------------------------------------------------------------
-
 
   ///////////////////////////////////////////////////////////////////////
   /////////////////////  Fullscreen Hero Image  /////////////////////////
@@ -138,12 +123,6 @@ jQuery(document).ready(function($) {
   });
 
 
-  /*Shopping Cart Button Animation
-   *******************************************/
-  if($cartBtn.length > 0) {
-    $cartBtn.spriteOnHover({fps:40,orientation:'horizontal'});
-  }
-
   /*Navi Toggle Animation
    *******************************************/
   $naviToggle.click(function(){
@@ -194,76 +173,6 @@ jQuery(document).ready(function($) {
   });
 
 
-  //Add(+/-) Button Number Incrementers
-  $(".incr-btn").on("click", function(e) {
-    var $button = $(this);
-    var oldValue = $button.parent().find('.quantity').val();
-    $button.parent().find('.incr-btn[data-action="decrease"]').removeClass('inactive');
-    if ($button.data('action') === "increase") {
-      var newVal = parseFloat(oldValue) + 1;
-    } else {
-      // Don't allow decrementing below 1
-      if (oldValue > 1) {
-        var newVal = parseFloat(oldValue) - 1;
-      } else {
-        newVal = 1;
-        $button.addClass('inactive');
-      }
-    }
-    $button.parent().find('.quantity').val(newVal);
-    e.preventDefault();
-  });
-
-  //Deleting Items
-  $(document).on('click', '.cart-dropdown .item .delete', function(){
-    var $emptyCart = $('.empty-cart');
-    var $target = $(this).parent().parent();
-    var $positions = $('.cart-dropdown .item');
-    var $positionQty = parseInt($('.cart-btn > .link').text());
-    $target.fadeOut(300, function(){
-      $.when($target.remove()).then( function(){
-        $positionQty = $positionQty -1;
-        $('.cart-btn > .link').text($positionQty);
-        if($positions.length === 4) {
-          $('.cart-dropdown .owl-nav').hide();
-        }
-        if($positions.length === 1) {
-          $('.cart-dropdown .wrap .container .row').remove();
-          $emptyCart.appendTo($('.cart-dropdown .wrap .container'));
-          $emptyCart.css('display', 'block');
-        }
-      });
-    });
-  });
-
-  //Promo Code
-  $('.cart-dropdown #promo-code-link').click(function(e){
-    $(this).hide();
-    $cartPromo.addClass('visible');
-    e.preventDefault();
-  });
-  $cartPromoInput.on('focus', function(){
-    $(this).parent().find('.btn').removeClass('disabled').addClass('btn-primary');
-  });
-  $cartPromoInput.on('blur', function(){
-    if($(this).val() === ''){
-      $(this).parent().find('.btn').removeClass('btn-primary').addClass('disabled');
-    }
-  });
-
-
-  /*Quick Search Form Animation
-   *******************************************/
-  $searchBtn.click(function() {
-    $qsForm.toggleClass('open');
-  });
-  $('.topper, .page, .footer').click(function(){
-    $qsForm.removeClass('open');
-  });
-  $(window).on('resize', function(){
-    $qsForm.removeClass('open');
-  });
-
   /*Mega Menu
    *******************************************/
   //Submenu Switching on Hover
@@ -280,23 +189,6 @@ jQuery(document).ready(function($) {
   //////////////////////////////////////////////////////////////////////
 
   $(window).on('load', function(){
-    /*Checking if it's touch device we disable parallax / Onscroll animations feature due to inconsistency*/
-    if (Modernizr.touch) {
-
-      $('body').removeClass('parallax');
-      $('body').removeClass('animated fadeIn');
-      $('*').removeClass('animation');
-    }
-
-    /*Parallax Backgrounds
-     *********************************************/
-    if($('.parallax').length > 0){
-      $('.parallax').stellar({
-        horizontalScrolling: false,
-        responsive:true
-      });
-    }
-
     /*Content Animations On Scroll
      *********************************************/
     if($('.animation').length > 0){
@@ -308,13 +200,6 @@ jQuery(document).ready(function($) {
     }
 
   });
-
-  ///////////////////////////////////////////////////////////////////////
-  /////////////////////////  Parallax Hero  ////////////////////////////
-  //////////////////////////////////////////////////////////////////////
-
-  $heroParallax.parallax();
-
   ///////////////////////////////////////////////////////////////////////
   ///////////////////////  Custom Widgets  /////////////////////////////
   //////////////////////////////////////////////////////////////////////
@@ -486,180 +371,6 @@ jQuery(document).ready(function($) {
   $lightGallery.lightGallery({caption: true});
 
   ///////////////////////////////////////////////////////////////////////
-  /////////////////////////////  Shop Tools  ////////////////////////////
-  //////////////////////////////////////////////////////////////////////
-
-  /*Share Button
-   *******************************************/
-  $shareBtn.click(function(e){
-    $(this).toggleClass('active');
-    $(this).parent().parent().parent().find('.share-opts').toggleClass('show');
-    $(this).parent().parent().parent().find('.description').toggleClass('hide');
-    e.preventDefault();
-  });
-
-  /*Clear Checkbox filters (Shop Sidebar)
-   *******************************************/
-  $clearChecks.click(function(){
-    $(this).parent().find('.icheckbox').removeClass('checked');
-  });
-
-  /*Color Switcher
-   *******************************************/
-  $('.color-switcher .color').click(function(){
-    var $color = $(this).parent().find('.color');
-    $color.removeClass('current');
-    $(this).addClass('current');
-  });
-  $('.color-switcher .color[data-target]').click(function(){
-    var $thumbs = $(this).parents('.item').find('.thumb img');
-    var $target = $(this).data('target');
-    $thumbs.removeClass('active');
-    $($target).addClass('active');
-  });
-
-  /*Purchase History
-   *******************************************/
-  $purchHistToggle.on('click',function(e){
-    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
-      e.preventDefault();
-      e.stopPropagation();
-    }
-    var $preview = $(this).parents('.shop-history').find('.preview img');
-    var $target = $(this).data('image');
-    $preview.removeClass('active');
-    $($target).addClass('active');
-  });
-
-  /*Shopping Cart Items Delete
-   *******************************************/
-  $(document).on('click', '.shopping-cart .item .delete', function(){
-    var $target = $(this).parent();
-    var $positions = $('.shopping-cart .item');
-    var $positionQty = parseInt($('.shopping-cart').parents('.container').find('.page-heading h3 i').text());
-    $target.fadeOut(300, function(){
-      $.when($target.remove()).then( function(){
-        $positionQty = $positionQty -1;
-        $('.shopping-cart').parents('.container').find('.page-heading h3 i').text($positionQty);
-        if($positions.length === 1) {
-          $('.shopping-cart header').remove();
-          $('.shopping-cart').parents('.container').find('.sidebar').remove();
-          $('.shopping-cart').parents('.container').find('.page-heading h3').html('Shopping cart is empty!<span></span>');
-        }
-      });
-    });
-  });
-
-  /*Wishlist Items Delete
-   *******************************************/
-  $(document).on('click', '.catalog-grid .item .delete', function(){
-    var $target = $(this).parent().parent();
-    var $positions = $('.catalog-grid .item');
-    var $positionQty = parseInt($('.catalog-grid').parents('.container').find('.page-heading h3 i').text());
-    $target.fadeOut(300, function(){
-      $.when($target.remove()).then( function(){
-        $positionQty = $positionQty -1;
-        $('.catalog-grid').parents('.container').find('.page-heading h3 i').text($positionQty);
-        if($positions.length === 1) {
-          $('.send-wishlist').remove();
-          $('.catalog-grid').parents('.container').find('.page-heading h3').html('Your Wishlist is empty!<span></span>');
-        }
-      });
-    });
-  });
-
-  /*Interactive Credit Card
-   *******************************************/
-  if($interactiveCard.length > 0){
-    $interactiveCard.card({
-      container: $('.card-wrapper'),
-      numberInput: 'input#cc_number',
-      nameInput: 'input#cc_name',
-      expiryInput: 'input#cc_expiry',
-      cvcInput: 'input#cc_cvc'
-    });
-  }
-
-
-  ///////////////////////////////////////////////////////////////////////
-  ////////////////////////////  User Account  //////////////////////////
-  //////////////////////////////////////////////////////////////////////
-
-  /*Password Change Box
-   *******************************************/
-  $editPass.click(function(){
-    $('.pass-block').addClass('expanded');
-  });
-
-  $closePass.click(function(){
-    $('.pass-block').removeClass('expanded');
-  });
-
-  ///////////////////////////////////////////////////////////////////////
-  ///////////////////  Gallery Grids + Filtering  //////////////////////
-  //////////////////////////////////////////////////////////////////////
-
-  /*Massonry Gallery Grid
-   *******************************************/
-  // Stitching class
-  var $filter = $('.filters li a');
-  $filter.click(function(){
-    $filter.parent().removeClass('current');
-    $(this).parent().addClass('current');
-  });
-
-
-
-  ///////////////////////////////////////////////////////////////////////
-  /////////////////////////  Google Maps  //////////////////////////////
-  //////////////////////////////////////////////////////////////////////
-  var geocoder;
-  var map;
-  var query = $('.google-map').data('location');
-  var zoom = $('.google-map').data('zoom');
-
-  function initialize() {
-
-    geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(-34.397, 150.644);
-
-    var mapOptions = {
-      center: latlng,
-      zoom: zoom,
-      scrollwheel: false,
-      disableDefaultUI: true,
-      styles: [{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
-    };
-
-    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
-    codeAddress();
-  }
-
-  function codeAddress() {
-    var image = 'img/map-marker.png';
-    var address = query;
-    geocoder.geocode( { 'address': address}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        map.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-          map: map,
-          position: results[0].geometry.location,
-          icon: image,
-          title: 'My Kedavra Office'
-        });
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }
-
-  if($('#map-canvas').length > 0) {
-    google.maps.event.addDomListener(window, 'load', initialize);
-  }
-
-
-  ///////////////////////////////////////////////////////////////////////
   /////////////////  Forms Validation and Styling  //////////////////////
   //////////////////////////////////////////////////////////////////////
 
@@ -733,24 +444,7 @@ jQuery(document).ready(function($) {
     }
   });
 
-  /*Checkout Form Validation
-   ************************************************/
-  $checkoutForm.validate({
-    rules: {
-      co_shipping_zip: {
-        required: true,
-        number: true
-      },
-      co_billing_zip: {
-        required: true,
-        number: true
-      },
-      co_billing_phone: {
-        required: true,
-        number: true
-      }
-    }
-  });
+
 
   /*Adding Placeholder Support in Older Browsers
    ************************************************/
@@ -763,91 +457,11 @@ jQuery(document).ready(function($) {
     radioClass: 'iradio'
   });
 
-  ///////////////////////////////////////////////////////////////////////
-  ///////////////////  User Account Interactions  ///////////////////////
-  //////////////////////////////////////////////////////////////////////
-
-  /*Hiding User Image in User Account Page - For Demo Only
-   **********************************************************************/
-  $('.user-avatar .delete').click(function(){
-    $(this).hide();
-    $(this).parent().find('.user-img').addClass('removed');
-  });
-
-  /*Adding / Canceling Addresses
-   **********************************************************************/
-  $('#adress-settings .add-address-btn').click(function(e){
-    var $target = $(this).attr('href');
-    $('#adress-settings').addClass('hidden');
-    $('.hidden-form').removeClass('active');
-    $($target).addClass('active');
-    e.preventDefault();
-  });
-  $('.cancel-address-btn').click(function(e){
-    $('#adress-settings').removeClass('hidden');
-    $('.hidden-form').removeClass('active');
-    e.preventDefault();
-  });
-
-  ///////////////////////////////////////////////////////////////////////
-  ///////////////////  Interactive Radar Chart  /////////////////////////
-  //////////////////////////////////////////////////////////////////////
-
-  var fillColor = $('.chart').data('fill');
-  var lineColor = $('.chart').data('lines');
-  var radarChartData = {
-    labels: ["Administrative", "Bankruptcy", "Employment/Labor", "Immigration", "Transactions", "Divorces", "Criminal Law"],
-    datasets: [
-      {
-        label: "First dataset",
-        fillColor: "rgba(220,220,220,0.2)",
-        strokeColor: "rgba(220,220,220,1)",
-        pointColor: "rgba(220,220,220,1)",
-        pointStrokeColor: "#fff",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(220,220,220,1)",
-        data: [68,50,92,78,46,100,40]
-      },
-      {
-        label: "Second dataset",
-        fillColor: fillColor,
-        strokeColor: lineColor,
-        pointColor: lineColor,
-        pointStrokeColor: "#fff",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: lineColor,
-        data: [28,68,40,19,96,27,100]
-      }
-    ]
-  };
-
-  window.onload = function(){
-    if($('#chart').length > 0){
-      window.myRadar = new Chart(document.getElementById("chart").getContext("2d")).Radar(radarChartData, {
-        responsive: true
-      });
-    }
-  };
 
 
   ///////////////////////////////////////////////////////////////////////
   /////////  INTERNAL ANCHOR LINKS SCROLLING (NAVIGATION)  //////////////
   //////////////////////////////////////////////////////////////////////
-
-  //$(".scroll").click(function(event){
-  //  var $elemOffsetTop = $('.navigation').offset();
-  //  console.debug("Navi offset:",$elemOffsetTop);
-  //  $('html, body').animate({scrollTop:$elemOffsetTop}, 1000, 'easeOutExpo');
-  //  $naviToggle.removeClass('active');
-  //  event.preventDefault();
-  //});
-  //$('.scrollup').click(function(e){
-  //  e.preventDefault();
-  //  console.debug("scrollup", e);
-  //  $('html, body').animate({scrollTop : 0}, {duration: 700, easing:'easeOutExpo'});
-  //  $naviToggle.removeClass('active');
-  //});
-
 
   $(window).scroll(function(){
     if ($(this).scrollTop() > 500) {
