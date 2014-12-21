@@ -19,6 +19,7 @@ angular
     'ngTouch',
     'smoothScroll',
     'angular-parallax',
+    'angular-carousel',
     'config'
   ])
   .config(function ($routeProvider, CONFERENCE) {
@@ -57,17 +58,28 @@ angular
       });
   });
 angular
-  .module('gr8conf2015').run(['$rootScope', 'smoothScroll','CONFERENCE', function($rootScope, smoothScroll, CONFERENCE) {
-    $rootScope.scrollToTop = function() {
+  .module('gr8conf2015').run(['$rootScope', 'smoothScroll', 'CONFERENCE', function ($rootScope, smoothScroll, CONFERENCE) {
+    $rootScope.scrollToTop = function () {
       var element = document.getElementById('page');
       smoothScroll(element, {offset: 50});
     };
-    $rootScope.eventImageCss = 'event-'+CONFERENCE.base;
-    $rootScope.logoUrl = 'views/'+CONFERENCE.base + "/templates/logo.html";
-    $rootScope.menuUrl = 'views/'+CONFERENCE.base+"/templates/menu.html";
-    $rootScope.eventUrl = 'views/'+CONFERENCE.base+"/templates/event.html";
-    $rootScope.blogUrl = 'views/'+CONFERENCE.base+"/templates/blog.html";
-    $rootScope.socialsUrl = 'views/'+CONFERENCE.base+"/templates/socials.html";
-    $rootScope.contactsUrl = 'views/'+CONFERENCE.base+"/templates/contacts.html";
-
+    $rootScope.eventImageCss = 'event-' + CONFERENCE.base;
+    $rootScope.logoUrl = 'views/' + CONFERENCE.base + '/templates/logo.html';
+    $rootScope.menuUrl = 'views/' + CONFERENCE.base + '/templates/menu.html';
+    $rootScope.eventUrl = 'views/' + CONFERENCE.base + '/templates/event.html';
+    $rootScope.blogUrl = 'views/' + CONFERENCE.base + '/templates/blog.html';
+    $rootScope.socialsUrl = 'views/' + CONFERENCE.base + '/templates/socials.html';
+    $rootScope.contactsUrl = 'views/' + CONFERENCE.base + '/templates/contacts.html';
+    $rootScope.technologiesUrl = 'views/templates/technologies.html';
+    $rootScope.technologies = [
+      {id: 1, img: 'groovy', title: "Groovy", url: "http://groovy-lang.org"},
+      {id: 2, img: 'grails', title: "Grails", url: "http://grails.org"},
+      {id: 3, img: 'griffon', title: "Griffon", url: "http://griffon.codehaus.org"},
+      {id: 4, img: 'gradle', title: "Gradle", url: "http://gradle.org"},
+      {id: 5, img: 'boot', title: "Spring Boot", url: "http://projects.spring.io/spring-boot"},
+      {id: 6, img: 'spock', title: "Spock", url: "http://spockframework.org/"},
+      {id: 7, img: 'gpars', title: "GPars", url: "http://gpars.org/"},
+      {id: 8, img: 'angularjs', title: "AngularJS", url: "http://angularjs.org"},
+      {id: 9, img: 'html5', title: "HTML5", url: "http://www.w3.org/TR/html5"},
+    ];
   }]);

@@ -1,0 +1,10 @@
+<div class="technologies text-center">
+  <ul rn-carousel rn-carousel-index="0" rn-carousel-auto-slide="5" rn-carousel-transition="fadeAndSlide">
+    <li ng-repeat="technology in technologies track by technology.id" ng-class="'id-' + technology.id">
+    <a href="{{technology.url}}" target="_blank"><img src="/images/technologies/{{technology.img}}.png"/></a>
+      <div class="technology-title">
+      {{technology.title}}
+      </div>
+  </li>
+</ul>
+</div>
