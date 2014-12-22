@@ -47,6 +47,13 @@
 
 }
 
+.technology-background(@image) {
+  &.technology-@{image} {
+    background-image: url('../images/technologies/@{image}.png');
+  }
+}
+
+
 .technologies {
   margin-top: 20px;
   ul[rn-carousel] {
@@ -54,18 +61,27 @@
     height: 180px;
     margin: 0 auto;
     li {
+      .technology-image {
+        width: 150px;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-position: 12px 12px;
+        .technology-background(groovy);
+        .technology-background(grails);
+        .technology-background(gradle);
+        .technology-background(griffon);
+        .technology-background(boot);
+        .technology-background(gpars);
+        .technology-background(angularjs);
+        .technology-background(spock);
+        .technology-background(html5);
+      }
       width: 100%;
       height: 100%;
       font-size: 20px;
       color: white;
-      img {
-        margin-left: 12px;
-        width: 125px;
-        height: 125px;
-      }
     }
   }
 }
-
 
 
