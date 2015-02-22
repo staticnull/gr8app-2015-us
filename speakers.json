@@ -1,1 +1,388 @@
-[{"id":25,"name":"Alexander (Sascha) Klein","company":"codecentric AG","twitter":"saschaklein","image":"http://cfp.gr8conf.org/profile/img/25","bio":"<p>Alexander (Sascha) Klein is Principal Consultant at codecentric AG in Germany. He works for more than 15 years in the java-ecosystem as developer, architect and trainer. His interests are UI-development and -ergonomy, DSL's and development efficency. He is an avowed opensource and Groovy follower, aswell and especially for enterprise projects, and Griffon commiter.<\u002fp>","talks":[{"id":18,"title":"Vert.x using Groovy - How you can simplify non-blocking code"}]},{"id":7,"name":"Alvaro Sanchez-Mariscal","company":"Odobo","twitter":"alvaro_sanchez","image":"http://cfp.gr8conf.org/profile/img/7","bio":"<p>Alvaro is a passionate software developer and agile enthusiast with over 14 years of experience. He started his career in 2001 coding in Perl and Java, but then quickly focused on Java EE, working for companies like IBM BCS, BEA Systems or Sun Microsystems. <\u002fp><p>He created his own company in 2005, Salenda, and since 2007 he specialized on Groovy/Grails, introducing them in Spain by founding Escuela de Groovy, the very first Grails company in Spain. Now he works as a Web Architect in Odobo, a Gibraltar-based startup with an \"App Store\"-like marketplace for HTML5 gambling games.<\u002fp><p>He is a speaker at conferences like Greach, Codemotion Madrid and Rome, GGX London or GR8Conf Copenhagen. He has also wrote several Grails plugins, including Spring Security REST, which provides RESTful, token based authentication for Grails.<\u002fp>","talks":[{"id":67,"title":"Creating RESTful API's with Grails and Spring Security"}]},{"id":47,"name":"Andres Almiray","company":"Canoo Engineering AG","twitter":"aalmiray","image":"http://cfp.gr8conf.org/profile/img/47","bio":"<p>Andres is a Java/Groovy developer and Java Champion, with more than 14 years of experience in software design and development. He has been involved in web and desktop application developments since the early days of Java. His current interests include Groovy, Swing and JavaFX. He is a true believer of open source and has participated in popular projects like Groovy, Grails and DbUnit, as well as starting his own projects. Founding member and current project lead of the Griffon framework.<\u002fp>","talks":[{"id":63,"title":"The Groovy Ecosystem Revisited"},{"id":64,"title":"Griffon: what's new and what's coming"},{"id":118,"title":"Hackergarten on Tour"}]},{"id":38,"name":"Benoit Hediard","company":"AgoraPulse","twitter":"benorama","image":"http://cfp.gr8conf.org/profile/img/38","bio":"<p>agorapulse.com CTO/founder. Passionate about Cloud/AWS, Java/Grails, UX/UI and the Facebook Platform!<\u002fp><p>Authors/maintainer of various Grails plugins: Facebook SDK, AWS SDK, Segment.io, Recurly, Raven...<\u002fp>","talks":[{"id":82,"title":"Grails & DevOps: continuous integration and delivery in the cloud"}]},{"id":70,"name":"Brian Johnsen","company":"Gennemtænkt IT","twitter":"brianjohnsendk","image":"http://cfp.gr8conf.org/profile/img/70","bio":"<p>Brian is co-founder and principal consultant at Gennemtænkt IT, a danish based company that specializes in Groovy and Grails. He has been working continuously with G* since 2007, and is currently conjuring systems for the danish government. Recently Brian has started teaching Groovy and Grails courses to spread the Groovy word. <\u002fp><p>He is test infected to the bone and interested in basically anything that enhances software quality and the ability to deliver working systems.<\u002fp>","talks":[{"id":116,"title":"The Grails introduction workshop"}]},{"id":69,"name":"Claus Ibsen","company":"Red Hat","twitter":"davsclaus","image":"http://cfp.gr8conf.org/profile/img/69","bio":"<p>Claus Ibsen is #1 contributor on Apache Camel for the past 6 years and he shares a great deal of his expertise as a co-author of Manning’s Camel in Action book. <\u002fp><p>Claus is also involved in other open source projects, usually related to Apache Camel, such as fabric8 and hawtio.<\u002fp><p>Claus has great fondness for the Groovy programming language, which he used at customer engagements in his former position as integration consultant. In fact three of Clauses all time favorite software projects: Camel, Groovy, and hawtio are all created by the same person James Strachan. Whom happens to also work in the same team as Claus. A strange little world :)<\u002fp><p>He works for Red Hat on open source integration software and the JBoss Fuse product and has more than 15 years experience in enterprise software development.<\u002fp>","talks":[{"id":115,"title":"Integration using Apache Camel and Groovy"}]},{"id":63,"name":"Colin Harrington","company":"Object Partners, Inc","twitter":"ColinHarrington","image":"http://cfp.gr8conf.org/profile/img/63","bio":"<p>Colin is a Principal Consultant at Object Partners with over 6 years of Grails experience and 10+ years of experience developing web-based applications. He's an agile practitioner with a proven track record having been a key component of multiple powerful fast-paced teams.<\u002fp>","talks":[{"id":103,"title":"Functional testing your Grails app with GEB"},{"id":120,"title":"Security workshop"}]},{"id":27,"name":"Cédric Champeau","company":"Self employed","twitter":"CedricChampeau","image":"http://cfp.gr8conf.org/profile/img/27","bio":"<p>Cédric Champeau is a core Groovy committer. He is working full time on the Groovy language for more than 3 years now. Prior to that, he spent several years in the industry as a user, where he used Groovy in multiple industrial contexts including DSLs for natural language processing, scripting or even workflows. <\u002fp><p>He implemented lots of features that appeared after Groovy 1.8, including static type checking, static compilation, AST transformations, Android support and more.<\u002fp>","talks":[{"id":25,"title":"Developping Android applications with Groovy?"},{"id":117,"title":"Unleashing the power of AST transformations"}]},{"id":54,"name":"Graeme Rocher","company":"Pivotal","twitter":"graemerocher","image":"http://cfp.gr8conf.org/profile/img/54","bio":"<p>Grails+Project+Lead<\u002fp>","talks":[{"id":80,"title":"Grails 3.0 and Beyond"}]},{"id":34,"name":"Guillaume Laforge","company":"Pivotal","twitter":"glaforge","image":"http://cfp.gr8conf.org/profile/img/34","bio":"<p>Guillaume Laforge is the project lead of the Groovy programming language project, and is working for Pivotal.<\u002fp>","talks":[{"id":46,"title":"Groovy in 2014 and beyond"}]},{"id":55,"name":"Göran Ehrsson","company":"Technipelago AB","twitter":"goeh","image":"http://cfp.gr8conf.org/profile/img/55","bio":"<p>Göran Ehrsson has been a software developer for 25 years, most of that as an enterprise developer building customer relationship management (CRM) applications in proprietary languages, C++, Java, and the last 5 years in Groovy. He is the founder of Technipelago AB, a small company based in Stockholm, Sweden that develops custom CRM applications for small and medium sized businesses.<\u002fp>","talks":[{"id":81,"title":"Cut your Grails application to pieces - build feature plugins"}]},{"id":51,"name":"Hubert Klein Ikkink","company":"JDriven","twitter":"mrhaki","image":"http://cfp.gr8conf.org/profile/img/51","bio":"<p>Hubert Klein Ikkink is also known as mrhaki. He uses this alias to write on his blog “Messages from mrhaki”. On this blog he writes short tips and tricks about Groovy features in the “Groovy Goodness” series. Hubert started to develop Java applications more than a decade ago. Six years ago he started to explore Groovy and Grails in personal projects, because of the dynamic nature of Groovy and the speed of development. Today he works with Groovy and Grails during his daytime job at JDriven in the Netherlands.<\u002fp>","talks":[{"id":73,"title":"Getting Groovy"},{"id":72,"title":"Gradle Goodness"}]},{"id":52,"name":"Jeff Scott Brown","company":"Pivotal","twitter":"jeffscottbrown","image":"http://cfp.gr8conf.org/profile/img/52","bio":"<p>Core member of the Grails development team, Jeff Scott Brown, is a Senior Engineer with Pivotal. Jeff was part of the core Groovy and Grails team and G2One and has been focused on that technology for almost a decade. Jeff is also a regular public speaker speaking on Groovy, Grails and other JVM related technologies at conferences all over the world.<\u002fp>","talks":[{"id":76,"title":"Polyglot Web Development With Grails 2"},{"id":75,"title":"Metaprogramming With The Groovy Compiler - Part 2 of 2"},{"id":74,"title":"Metaprogramming With The Groovy Runtime - Part 1 of 2"}]},{"id":46,"name":"Jochen Theodorou","company":"GoPivotal","twitter":"JochenTheodorou","image":"http://cfp.gr8conf.org/profile/img/46","bio":"<p>Committer to Groovy Core since 2005. Being paid to develop Groovy since 2007 through SpringSource, VMWare and others. Currently working at GoPivotal to develop Groovy.<\u002fp>","talks":[{"id":61,"title":"The new Groovy Meta Object Protocol in examples"}]},{"id":9,"name":"Jorge Franco Leza","company":"Osoco","twitter":"jfrancoleza","image":"http://cfp.gr8conf.org/profile/img/9","bio":"<p>More than 12 years developing, from Delphi to Java, and now Groovy. Im developer of grooscript, a library that converts groovy code to javascript. After some years slacking with my code, in last 3 years I have begun to worry about it, and try to do things better each day. Now, I'm working at Osoco in Madrid, and thanks to my mates there, I'm learning a lot each day.<\u002fp>","talks":[{"id":1,"title":"Grooscript"}]},{"id":64,"name":"Julien Viet","company":"eXo Platform","twitter":"julienviet","image":"http://cfp.gr8conf.org/profile/img/64","bio":"<p>Julien Viet leads product development of eXo Platform's flagship eXo Portal product on which the entire eXo product line is based. In June 2009, eXo Portal was merged with JBoss Portal to create GateIn, which Julien now co-leads. In this role, he is deeply involved in GateIn's technical vision and plays a key role in product development and advanced R&amp;D architecture prototyping.<\u002fp><p>Prior to eXo, Julien was an engineer at JBoss, where he founded the JBoss Portal project in 2004. In four years, Julien built an enterprise-class portal server with a team of only five developers. He started contributing to the JBoss project (application server) in 2002 and joined JBoss, Inc. two years later.<\u002fp><p>Julien is passionate about open source and active in standards groups. In his spare time, he started the Chromattic project, an advanced Object to Java Content Repository (JCR) mapping framework that now underpins the GateIn project. He is also an expert group member for several Java specifications, including Portlet 2.0 (JSR-286), Content Repository for Java Technology API 2.0 (JSR-283) and Portlet Bridge for JavaServer Faces (JSR-301). Julien holds an engineering degree from Institut National des Télécommunications, one of France´s top schools for engineering.<\u002fp>","talks":[{"id":104,"title":"CRaSH the shell for the Java Virtual Machine"}]},{"id":28,"name":"Lari Hotari","company":"Pivotal Software, Inc.","twitter":"lhotari","image":"http://cfp.gr8conf.org/profile/img/28","bio":"<p>Lari Hotari is a Grails Team Member at Pivotal. He has been writing code for over 30 years and enjoys it a lot. His experience of using the JVM platform for web applications started back in 1997 with Sun Java Web Server 1.0 . Lari has contributed to Grails since 2009.<\u002fp>","talks":[{"id":27,"title":"Performance tuning Grails applications"},{"id":83,"title":"Ratpack and Grails 3"}]},{"id":36,"name":"Marco Vermeulen","company":"Self Employed","twitter":"marcoVermeulen","image":"http://cfp.gr8conf.org/profile/img/36","bio":"<p>Marco Vermeulen is a South African Software Developer who works and lives in London. <\u002fp><p>He has spent many years working with Enterprise Java, having experienced both the benefits and frustrations of the technology. He has since also become passionate about alternate JVM languages, and has used these to engineer solutions for Shazam, Associated Newspapers, Burberry and Visa. His focus is always on crafting quality software guided by tests, and tries to encourage others to do the same.<\u002fp><p>He currently works as an Equal Experts associate, and spends his spare time working on his pet project, GVM.<\u002fp>","talks":[{"id":50,"title":"Building Micro Services using Groovy, Spring Boot and friends."},{"id":106,"title":"BDD using Cucumber JVM and Groovy"}]},{"id":17,"name":"Noam Tenne","company":"JFrog Ltd.","twitter":"NoamTenne","image":"http://cfp.gr8conf.org/profile/img/17","bio":"<p>Noam has gained many XP points by developing with a slew of JVM languages over the past 10 years. As a Senior Developer at JFrog's R&amp;D team, he tries to solve developer pains by ideating, designing, developing and building software systems such as JFrog's Artifactory and newborn SaaS platform - Bintray.<\u002fp><p>While not working on these products, he develops around and contributes to various frameworks, tools and plugins in the Java and Groovy ecosystem.<\u002fp>","talks":[{"id":110,"title":"Groovy Puzzlers - As usual - Traps, Pitfalls, and End Cases"}]},{"id":11,"name":"Peter Ledbrook","company":"Self employed","twitter":"pledbrook","image":"http://cfp.gr8conf.org/profile/img/11","bio":"<p>Peter is a long time Java developer, Grails user and plugin author. He is also co-author of the book Grails in Action with Glen Smith. His current pet project is Lazybones, a simple tool for creating new projects of any type from templates.<\u002fp><p>He has been using Java for over 10 years across a range of industries and technologies, covering both client-side and server-side development. He discovered Groovy &amp; Grails in 2006 and is now a core Grails committer, general Groovy fan, and speaker on Groovy technologies. He is currently an independent consultant based in London.<\u002fp>","talks":[{"id":118,"title":"Hackergarten on Tour"},{"id":20,"title":"Application architectures with Grails"},{"id":29,"title":"Bootstrapping your projects with Lazybones"}]},{"id":26,"name":"Rob Fletcher","company":"Netflix","twitter":"rfletcherEW","image":"http://cfp.gr8conf.org/profile/img/26","bio":"<p>Rob Fletcher has been working commercially with Groovy since 2007. He has contributed several Grails plugins and has been an occasional core committer. More recently Rob has been involved with Ratpack and his own HTTP mocking library Betamax. He is passionate about software craftsmanship, testing and usability. Rob blogs at http://blog.freeside.co/ and spends too much time on Twitter.<\u002fp>","talks":[{"id":24,"title":"Idiomatic Spock"},{"id":26,"title":"Hybrid client/server view rendering with Grails"}]},{"id":29,"name":"Ryan Vanderwerf","company":"ReachForce","twitter":"RyanVanderwerf","image":"http://cfp.gr8conf.org/profile/img/29","bio":"<p>Chief Architect @ Reachforce  Follow Ryan Vanderwerf on Twitter Ryan is Chief Systems and Software Architect and Director of Products at ReachForce and formerly Lead Architect at Developerprogram.com. He maintains the grails-quartz plugin, GVPS Grails plugin, and Struts 1 plugins, and co-chair of the Austin Groovy and Grails User Group in Austin, TX. Ryan is currently building a Grails infrastructure for ReachForce as well as teaching Grails to the developer team. Ryan is also co-founder of Xan Endeavors, LLC, a collaboration of software development, consulting, coaching, and innovation games. In the past Ryan has architected a Grails and Groovy solution for Developerprogram.com that allows rapid deployment of Developer Program portals for all kinds of companies, specializing in the mobile industry. He has also built Java and Linux based webcasting for events such as SXSW, built telecom software, and SaaS systems for the financial sector.<\u002fp>","talks":[{"id":33,"title":"Getting Groovy With Lego Mindstorms EV3"},{"id":37,"title":"Getting Groovy and Grails into the Enterprise"},{"id":34,"title":"Deploying, Scaling, and Running Grails on AWS and VPC"}]},{"id":1,"name":"Søren Berg Glasius","company":"GR8Conf","twitter":"sbglasius","image":"http://cfp.gr8conf.org/profile/img/1","bio":"<p>I am the co-founder of GR8Conf and your friendly organizer of GR8Conf Europe...<\u002fp><p>In 2009 Guillaume Laforge and I founded the GR8Conf. It was a gr8 success - with over 100 attendees from 17 countries around the world.<\u002fp><p>Now six years later, GR8Conf is still going stronger.<\u002fp><p>Besides doing GR8Conf, Søren works for OpenMinds, where he everyday gets to work with his passion: Groovy and Grails. I have worked in the Java world for over 12 years, and have a gr8 passion for Groovy, Grails, Griffon and the other gr8 technologies.<\u002fp><p>I'm looking forward to being your host at GR8Conf EU and a speaker at GR8Conf US<\u002fp>","talks":[{"id":119,"title":"Goodbye"},{"id":113,"title":"Meet & Greet"},{"id":112,"title":"Welcome to GR8Conf 2014"}]}]
+[
+  {
+    "id": 25,
+    "name": "Alexander (Sascha) Klein",
+    "company": "codecentric AG",
+    "twitter": "saschaklein",
+    "image": "http://cfp.gr8conf.org/profile/img/25",
+    "bio": "<p>Alexander (Sascha) Klein is Principal Consultant at codecentric AG in Germany. He works for more than 15 years in the java-ecosystem as developer, architect and trainer. His interests are UI-development and -ergonomy, DSL's and development efficency. He is an avowed opensource and Groovy follower, aswell and especially for enterprise projects, and Griffon commiter.<\u002fp>",
+    "talks": [
+      {
+        "id": 18,
+        "title": "Vert.x using Groovy - How you can simplify non-blocking code"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Alvaro Sanchez-Mariscal",
+    "company": "Odobo",
+    "twitter": "alvaro_sanchez",
+    "image": "http://cfp.gr8conf.org/profile/img/7",
+    "bio": "<p>Alvaro is a passionate software developer and agile enthusiast with over 14 years of experience. He started his career in 2001 coding in Perl and Java, but then quickly focused on Java EE, working for companies like IBM BCS, BEA Systems or Sun Microsystems. <\u002fp><p>He created his own company in 2005, Salenda, and since 2007 he specialized on Groovy/Grails, introducing them in Spain by founding Escuela de Groovy, the very first Grails company in Spain. Now he works as a Web Architect in Odobo, a Gibraltar-based startup with an \"App Store\"-like marketplace for HTML5 gambling games.<\u002fp><p>He is a speaker at conferences like Greach, Codemotion Madrid and Rome, GGX London or GR8Conf Copenhagen. He has also wrote several Grails plugins, including Spring Security REST, which provides RESTful, token based authentication for Grails.<\u002fp>",
+    "talks": [
+      {
+        "id": 67,
+        "title": "Creating RESTful API's with Grails and Spring Security"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Andres Almiray",
+    "company": "Canoo Engineering AG",
+    "twitter": "aalmiray",
+    "image": "http://cfp.gr8conf.org/profile/img/47",
+    "bio": "<p>Andres is a Java/Groovy developer and Java Champion, with more than 14 years of experience in software design and development. He has been involved in web and desktop application developments since the early days of Java. His current interests include Groovy, Swing and JavaFX. He is a true believer of open source and has participated in popular projects like Groovy, Grails and DbUnit, as well as starting his own projects. Founding member and current project lead of the Griffon framework.<\u002fp>",
+    "talks": [
+      {
+        "id": 63,
+        "title": "The Groovy Ecosystem Revisited"
+      },
+      {
+        "id": 64,
+        "title": "Griffon: what's new and what's coming"
+      },
+      {
+        "id": 118,
+        "title": "Hackergarten on Tour"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Benoit Hediard",
+    "company": "AgoraPulse",
+    "twitter": "benorama",
+    "image": "http://cfp.gr8conf.org/profile/img/38",
+    "bio": "<p>agorapulse.com CTO/founder. Passionate about Cloud/AWS, Java/Grails, UX/UI and the Facebook Platform!<\u002fp><p>Authors/maintainer of various Grails plugins: Facebook SDK, AWS SDK, Segment.io, Recurly, Raven...<\u002fp>",
+    "talks": [
+      {
+        "id": 82,
+        "title": "Grails & DevOps: continuous integration and delivery in the cloud"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Brian Johnsen",
+    "company": "Gennemtænkt IT",
+    "twitter": "brianjohnsendk",
+    "image": "http://cfp.gr8conf.org/profile/img/70",
+    "bio": "<p>Brian is co-founder and principal consultant at Gennemtænkt IT, a danish based company that specializes in Groovy and Grails. He has been working continuously with G* since 2007, and is currently conjuring systems for the danish government. Recently Brian has started teaching Groovy and Grails courses to spread the Groovy word. <\u002fp><p>He is test infected to the bone and interested in basically anything that enhances software quality and the ability to deliver working systems.<\u002fp>",
+    "talks": [
+      {
+        "id": 116,
+        "title": "The Grails introduction workshop"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Claus Ibsen",
+    "company": "Red Hat",
+    "twitter": "davsclaus",
+    "image": "http://cfp.gr8conf.org/profile/img/69",
+    "bio": "<p>Claus Ibsen is #1 contributor on Apache Camel for the past 6 years and he shares a great deal of his expertise as a co-author of Manning’s Camel in Action book. <\u002fp><p>Claus is also involved in other open source projects, usually related to Apache Camel, such as fabric8 and hawtio.<\u002fp><p>Claus has great fondness for the Groovy programming language, which he used at customer engagements in his former position as integration consultant. In fact three of Clauses all time favorite software projects: Camel, Groovy, and hawtio are all created by the same person James Strachan. Whom happens to also work in the same team as Claus. A strange little world :)<\u002fp><p>He works for Red Hat on open source integration software and the JBoss Fuse product and has more than 15 years experience in enterprise software development.<\u002fp>",
+    "talks": [
+      {
+        "id": 115,
+        "title": "Integration using Apache Camel and Groovy"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Colin Harrington",
+    "company": "Object Partners, Inc",
+    "twitter": "ColinHarrington",
+    "image": "http://cfp.gr8conf.org/profile/img/63",
+    "bio": "<p>Colin is a Principal Consultant at Object Partners with over 6 years of Grails experience and 10+ years of experience developing web-based applications. He's an agile practitioner with a proven track record having been a key component of multiple powerful fast-paced teams.<\u002fp>",
+    "talks": [
+      {
+        "id": 103,
+        "title": "Functional testing your Grails app with GEB"
+      },
+      {
+        "id": 120,
+        "title": "Security workshop"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Cédric Champeau",
+    "company": "Self employed",
+    "twitter": "CedricChampeau",
+    "image": "http://cfp.gr8conf.org/profile/img/27",
+    "bio": "<p>Cédric Champeau is a core Groovy committer. He is working full time on the Groovy language for more than 3 years now. Prior to that, he spent several years in the industry as a user, where he used Groovy in multiple industrial contexts including DSLs for natural language processing, scripting or even workflows. <\u002fp><p>He implemented lots of features that appeared after Groovy 1.8, including static type checking, static compilation, AST transformations, Android support and more.<\u002fp>",
+    "talks": [
+      {
+        "id": 25,
+        "title": "Developping Android applications with Groovy?"
+      },
+      {
+        "id": 117,
+        "title": "Unleashing the power of AST transformations"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Graeme Rocher",
+    "company": "Pivotal",
+    "twitter": "graemerocher",
+    "image": "http://cfp.gr8conf.org/profile/img/54",
+    "bio": "<p>Grails+Project+Lead<\u002fp>",
+    "talks": [
+      {
+        "id": 80,
+        "title": "Grails 3.0 and Beyond"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Guillaume Laforge",
+    "company": "Pivotal",
+    "twitter": "glaforge",
+    "image": "http://cfp.gr8conf.org/profile/img/34",
+    "bio": "<p>Guillaume Laforge is the project lead of the Groovy programming language project, and is working for Pivotal.<\u002fp>",
+    "talks": [
+      {
+        "id": 46,
+        "title": "Groovy in 2014 and beyond"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Göran Ehrsson",
+    "company": "Technipelago AB",
+    "twitter": "goeh",
+    "image": "http://cfp.gr8conf.org/profile/img/55",
+    "bio": "<p>Göran Ehrsson has been a software developer for 25 years, most of that as an enterprise developer building customer relationship management (CRM) applications in proprietary languages, C++, Java, and the last 5 years in Groovy. He is the founder of Technipelago AB, a small company based in Stockholm, Sweden that develops custom CRM applications for small and medium sized businesses.<\u002fp>",
+    "talks": [
+      {
+        "id": 81,
+        "title": "Cut your Grails application to pieces - build feature plugins"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Hubert Klein Ikkink",
+    "company": "JDriven",
+    "twitter": "mrhaki",
+    "image": "http://cfp.gr8conf.org/profile/img/51",
+    "bio": "<p>Hubert Klein Ikkink is also known as mrhaki. He uses this alias to write on his blog “Messages from mrhaki”. On this blog he writes short tips and tricks about Groovy features in the “Groovy Goodness” series. Hubert started to develop Java applications more than a decade ago. Six years ago he started to explore Groovy and Grails in personal projects, because of the dynamic nature of Groovy and the speed of development. Today he works with Groovy and Grails during his daytime job at JDriven in the Netherlands.<\u002fp>",
+    "talks": [
+      {
+        "id": 73,
+        "title": "Getting Groovy"
+      },
+      {
+        "id": 72,
+        "title": "Gradle Goodness"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Jeff Scott Brown",
+    "company": "Pivotal",
+    "twitter": "jeffscottbrown",
+    "image": "http://cfp.gr8conf.org/profile/img/52",
+    "bio": "<p>Core member of the Grails development team, Jeff Scott Brown, is a Senior Engineer with Pivotal. Jeff was part of the core Groovy and Grails team and G2One and has been focused on that technology for almost a decade. Jeff is also a regular public speaker speaking on Groovy, Grails and other JVM related technologies at conferences all over the world.<\u002fp>",
+    "talks": [
+      {
+        "id": 76,
+        "title": "Polyglot Web Development With Grails 2"
+      },
+      {
+        "id": 75,
+        "title": "Metaprogramming With The Groovy Compiler - Part 2 of 2"
+      },
+      {
+        "id": 74,
+        "title": "Metaprogramming With The Groovy Runtime - Part 1 of 2"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Jochen Theodorou",
+    "company": "GoPivotal",
+    "twitter": "JochenTheodorou",
+    "image": "http://cfp.gr8conf.org/profile/img/46",
+    "bio": "<p>Committer to Groovy Core since 2005. Being paid to develop Groovy since 2007 through SpringSource, VMWare and others. Currently working at GoPivotal to develop Groovy.<\u002fp>",
+    "talks": [
+      {
+        "id": 61,
+        "title": "The new Groovy Meta Object Protocol in examples"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Jorge Franco Leza",
+    "company": "Osoco",
+    "twitter": "jfrancoleza",
+    "image": "http://cfp.gr8conf.org/profile/img/9",
+    "bio": "<p>More than 12 years developing, from Delphi to Java, and now Groovy. Im developer of grooscript, a library that converts groovy code to javascript. After some years slacking with my code, in last 3 years I have begun to worry about it, and try to do things better each day. Now, I'm working at Osoco in Madrid, and thanks to my mates there, I'm learning a lot each day.<\u002fp>",
+    "talks": [
+      {
+        "id": 1,
+        "title": "Grooscript"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Julien Viet",
+    "company": "eXo Platform",
+    "twitter": "julienviet",
+    "image": "http://cfp.gr8conf.org/profile/img/64",
+    "bio": "<p>Julien Viet leads product development of eXo Platform's flagship eXo Portal product on which the entire eXo product line is based. In June 2009, eXo Portal was merged with JBoss Portal to create GateIn, which Julien now co-leads. In this role, he is deeply involved in GateIn's technical vision and plays a key role in product development and advanced R&amp;D architecture prototyping.<\u002fp><p>Prior to eXo, Julien was an engineer at JBoss, where he founded the JBoss Portal project in 2004. In four years, Julien built an enterprise-class portal server with a team of only five developers. He started contributing to the JBoss project (application server) in 2002 and joined JBoss, Inc. two years later.<\u002fp><p>Julien is passionate about open source and active in standards groups. In his spare time, he started the Chromattic project, an advanced Object to Java Content Repository (JCR) mapping framework that now underpins the GateIn project. He is also an expert group member for several Java specifications, including Portlet 2.0 (JSR-286), Content Repository for Java Technology API 2.0 (JSR-283) and Portlet Bridge for JavaServer Faces (JSR-301). Julien holds an engineering degree from Institut National des Télécommunications, one of France´s top schools for engineering.<\u002fp>",
+    "talks": [
+      {
+        "id": 104,
+        "title": "CRaSH the shell for the Java Virtual Machine"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Lari Hotari",
+    "company": "Pivotal Software, Inc.",
+    "twitter": "lhotari",
+    "image": "http://cfp.gr8conf.org/profile/img/28",
+    "bio": "<p>Lari Hotari is a Grails Team Member at Pivotal. He has been writing code for over 30 years and enjoys it a lot. His experience of using the JVM platform for web applications started back in 1997 with Sun Java Web Server 1.0 . Lari has contributed to Grails since 2009.<\u002fp>",
+    "talks": [
+      {
+        "id": 27,
+        "title": "Performance tuning Grails applications"
+      },
+      {
+        "id": 83,
+        "title": "Ratpack and Grails 3"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Marco Vermeulen",
+    "company": "Self Employed",
+    "twitter": "marcoVermeulen",
+    "image": "http://cfp.gr8conf.org/profile/img/36",
+    "bio": "<p>Marco Vermeulen is a South African Software Developer who works and lives in London. <\u002fp><p>He has spent many years working with Enterprise Java, having experienced both the benefits and frustrations of the technology. He has since also become passionate about alternate JVM languages, and has used these to engineer solutions for Shazam, Associated Newspapers, Burberry and Visa. His focus is always on crafting quality software guided by tests, and tries to encourage others to do the same.<\u002fp><p>He currently works as an Equal Experts associate, and spends his spare time working on his pet project, GVM.<\u002fp>",
+    "talks": [
+      {
+        "id": 50,
+        "title": "Building Micro Services using Groovy, Spring Boot and friends."
+      },
+      {
+        "id": 106,
+        "title": "BDD using Cucumber JVM and Groovy"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Noam Tenne",
+    "company": "JFrog Ltd.",
+    "twitter": "NoamTenne",
+    "image": "http://cfp.gr8conf.org/profile/img/17",
+    "bio": "<p>Noam has gained many XP points by developing with a slew of JVM languages over the past 10 years. As a Senior Developer at JFrog's R&amp;D team, he tries to solve developer pains by ideating, designing, developing and building software systems such as JFrog's Artifactory and newborn SaaS platform - Bintray.<\u002fp><p>While not working on these products, he develops around and contributes to various frameworks, tools and plugins in the Java and Groovy ecosystem.<\u002fp>",
+    "talks": [
+      {
+        "id": 110,
+        "title": "Groovy Puzzlers - As usual - Traps, Pitfalls, and End Cases"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Peter Ledbrook",
+    "company": "Self employed",
+    "twitter": "pledbrook",
+    "image": "http://cfp.gr8conf.org/profile/img/11",
+    "bio": "<p>Peter is a long time Java developer, Grails user and plugin author. He is also co-author of the book Grails in Action with Glen Smith. His current pet project is Lazybones, a simple tool for creating new projects of any type from templates.<\u002fp><p>He has been using Java for over 10 years across a range of industries and technologies, covering both client-side and server-side development. He discovered Groovy &amp; Grails in 2006 and is now a core Grails committer, general Groovy fan, and speaker on Groovy technologies. He is currently an independent consultant based in London.<\u002fp>",
+    "talks": [
+      {
+        "id": 118,
+        "title": "Hackergarten on Tour"
+      },
+      {
+        "id": 20,
+        "title": "Application architectures with Grails"
+      },
+      {
+        "id": 29,
+        "title": "Bootstrapping your projects with Lazybones"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Rob Fletcher",
+    "company": "Netflix",
+    "twitter": "rfletcherEW",
+    "image": "http://cfp.gr8conf.org/profile/img/26",
+    "bio": "<p>Rob Fletcher has been working commercially with Groovy since 2007. He has contributed several Grails plugins and has been an occasional core committer. More recently Rob has been involved with Ratpack and his own HTTP mocking library Betamax. He is passionate about software craftsmanship, testing and usability. Rob blogs at http://blog.freeside.co/ and spends too much time on Twitter.<\u002fp>",
+    "talks": [
+      {
+        "id": 24,
+        "title": "Idiomatic Spock"
+      },
+      {
+        "id": 26,
+        "title": "Hybrid client/server view rendering with Grails"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Ryan Vanderwerf",
+    "company": "ReachForce",
+    "twitter": "RyanVanderwerf",
+    "image": "http://cfp.gr8conf.org/profile/img/29",
+    "bio": "<p>Chief Architect @ Reachforce  Follow Ryan Vanderwerf on Twitter Ryan is Chief Systems and Software Architect and Director of Products at ReachForce and formerly Lead Architect at Developerprogram.com. He maintains the grails-quartz plugin, GVPS Grails plugin, and Struts 1 plugins, and co-chair of the Austin Groovy and Grails User Group in Austin, TX. Ryan is currently building a Grails infrastructure for ReachForce as well as teaching Grails to the developer team. Ryan is also co-founder of Xan Endeavors, LLC, a collaboration of software development, consulting, coaching, and innovation games. In the past Ryan has architected a Grails and Groovy solution for Developerprogram.com that allows rapid deployment of Developer Program portals for all kinds of companies, specializing in the mobile industry. He has also built Java and Linux based webcasting for events such as SXSW, built telecom software, and SaaS systems for the financial sector.<\u002fp>",
+    "talks": [
+      {
+        "id": 33,
+        "title": "Getting Groovy With Lego Mindstorms EV3"
+      },
+      {
+        "id": 37,
+        "title": "Getting Groovy and Grails into the Enterprise"
+      },
+      {
+        "id": 34,
+        "title": "Deploying, Scaling, and Running Grails on AWS and VPC"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Søren Berg Glasius",
+    "company": "GR8Conf",
+    "twitter": "sbglasius",
+    "image": "http://cfp.gr8conf.org/profile/img/1",
+    "bio": "<p>I am the co-founder of GR8Conf and your friendly organizer of GR8Conf Europe...<\u002fp><p>In 2009 Guillaume Laforge and I founded the GR8Conf. It was a gr8 success - with over 100 attendees from 17 countries around the world.<\u002fp><p>Now six years later, GR8Conf is still going stronger.<\u002fp><p>Besides doing GR8Conf, Søren works for OpenMinds, where he everyday gets to work with his passion: Groovy and Grails. I have worked in the Java world for over 12 years, and have a gr8 passion for Groovy, Grails, Griffon and the other gr8 technologies.<\u002fp><p>I'm looking forward to being your host at GR8Conf EU and a speaker at GR8Conf US<\u002fp>",
+    "talks": [
+      {
+        "id": 119,
+        "title": "Goodbye"
+      },
+      {
+        "id": 113,
+        "title": "Meet & Greet"
+      },
+      {
+        "id": 112,
+        "title": "Welcome to GR8Conf 2014"
+      }
+    ]
+  }
+]
