@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name gr8app2015App.controller:CfpctrlCtrl
+ * @name gr8app2015App.controller:CfpCtrl
  * @description
- * # CfpctrlCtrl
+ * # CfpCtrl
  * Controller of the gr8app2015App
  */
 angular.module('gr8conf2015')
-  .controller('CfpctrlCtrl', function ($scope) {
+  .controller('CfpCtrl', function ($scope) {
 
   });

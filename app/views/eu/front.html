@@ -6,6 +6,7 @@
     <p class="lead">
       Groovy, Grails and the related technologies have seen astounding growth in interest and adoption the past few years, and with good reason. To spread the word even more we have created GR8Conf.
     </p>
+
     <p class="text-center">
       <img src="/images/eu/technologies.png"/>
     </p>
@@ -26,5 +27,20 @@
     <p>
       Some of the technologies covered are Groovy, Grails, Gradle, Spock, GMetrics, GContracts, Griffon and many many more.
     </p>
+  </div>
+</section>
+<section class="page-block">
+  <!--Team Carousel-->
+  <div class="speakers-carousel" ng-controller="SpeakersCtrl">
+
+    <ul rn-carousel rn-carousel-index="0" rn-carousel-auto-slide="5" rn-carousel-transition="hexagon" rn-carousel-buffered rn-carousel-controls>
+      <li ng-repeat="speaker in speakers">
+
+        <div class="ms-slide">
+          <speaker-carousel speaker="speaker"/>
+        </div>
+
+      </li>
+    </ul>
   </div>
 </section>
