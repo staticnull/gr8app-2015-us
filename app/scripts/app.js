@@ -20,10 +20,11 @@ angular
     'smoothScroll',
     'angular-parallax',
     'angular-carousel',
-    'config'
+    'config',
+    'ui.bootstrap'
   ])
-  .config(function ($routeProvider, CONFERENCE) {
-    console.debug(CONFERENCE);
+  .config(function ($routeProvider, CONFERENCE, ENV, API) {
+    console.debug(CONFERENCE, ENV, API);
     var base = 'views/' + CONFERENCE.base;
     $routeProvider
       .when('/', {
@@ -58,7 +59,7 @@ angular
       });
   });
 angular
-  .module('gr8conf2015').run(['$rootScope', 'smoothScroll', 'CONFERENCE', function ($rootScope, smoothScroll, CONFERENCE) {
+  .module('gr8conf2015').run(['$rootScope', 'smoothScroll', 'backendService', 'CONFERENCE', function ($rootScope, smoothScroll, backendService, CONFERENCE) {
     $rootScope.scrollToTop = function () {
       var element = document.getElementById('page');
       smoothScroll(element, {offset: 50});
@@ -82,4 +83,7 @@ angular
       {id: 8, img: 'angularjs', title: "AngularJS", url: "http://angularjs.org"},
       {id: 9, img: 'html5', title: "HTML5", url: "http://www.w3.org/TR/html5"},
     ];
+    backendService.bootstrap();
+
+
   }]);

@@ -1,4 +1,5 @@
 {
+  "ENV": "production",
   "CONFERENCE": {
     "id": 3,
     "blogUrl": "sbglasius.tumblr.com",

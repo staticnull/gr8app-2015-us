@@ -15,7 +15,7 @@ angular.module('gr8conf2015')
         name: "Graeme Rocher",
         company: "Pivotal",
         twitter: "graemerocher",
-        image: "http://cfp.gr8conf.org/profile/img/54",
+        image: "http://localhost:8081/gr8conf-cfp/profile/img/54",
         bio: "<p>Graeme is the project lead of the Grails project.</p>",
         talks: []
       },
@@ -24,7 +24,7 @@ angular.module('gr8conf2015')
         name: "Guillaume Laforge",
         company: "Pivotal",
         twitter: "glaforge",
-        image: "http://cfp.gr8conf.org/profile/img/34",
+        image: "http://localhost:8081/gr8conf-cfp/profile/img/34",
         bio: "<p>Guillaume is the project lead of the Groovy programming language project.</p>",
         talks: []
       },
@@ -33,7 +33,7 @@ angular.module('gr8conf2015')
         name: "Lari Hotari",
         company: "Pivotal Software, Inc.",
         twitter: "lhotari",
-        image: "http://cfp.gr8conf.org/profile/img/28",
+        image: "http://localhost:8081/gr8conf-cfp/profile/img/28",
         bio: "<p>Lari is a Grails Team Member at Pivotal. </p>",
         talks: []
       },
@@ -42,7 +42,7 @@ angular.module('gr8conf2015')
         name: "Marco Vermeulen",
         company: "Self Employed",
         twitter: "marcoVermeulen",
-        image: "http://cfp.gr8conf.org/profile/img/36",
+        image: "http://localhost:8081/gr8conf-cfp/profile/img/36",
         bio: "<p>Marco is a South African Software Developer who works and lives in London. ",
         talks: []
       },{
@@ -50,7 +50,7 @@ angular.module('gr8conf2015')
         name: "Peter Ledbrook",
         company: "Self employed",
         twitter: "pledbrook",
-        image: "http://cfp.gr8conf.org/profile/img/11",
+        image: "http://localhost:8081/gr8conf-cfp/profile/img/11",
         bio: "<p>Peter is a long time Java developer, Grails user and plugin author. </p>",
         talks: []
       }

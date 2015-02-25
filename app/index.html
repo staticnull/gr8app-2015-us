@@ -129,7 +129,7 @@
       <!--Header Close-->
 
       <!--Page Content-->
-      <div id="page" class="page" parallax-background parallax-ratio="0.1">
+      <div id="page" class="page" >
         <div ng-view=""></div>
       </div>
       <!--Page Content Close-->
@@ -235,6 +235,7 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="bower_components/angular-parallax/scripts/angular-parallax.js"></script>
 <script src="bower_components/revolunet-angular-carousel/dist/angular-carousel.js"></script>
 <script src="bower_components/ngSmoothScroll/angular-smooth-scroll.js"></script>
@@ -281,13 +282,22 @@
 <script src="scripts/controllers/cfp.js"></script>
 <script src="scripts/controllers/speakers.js"></script>
 <script src="scripts/controllers/about.js"></script>
-<script src="scripts/services/menuservice.js"></script>
+<script src="scripts/controllers/cfp.js"></script>
+
+<script src="scripts/directives/speaker.js"></script>
 <script src="scripts/directives/mapclick.js"></script>
+
+<script src="scripts/services/backend.js"></script>
+<script src="scripts/services/blogservice.js"></script>
+<script src="scripts/services/dataservice.js"></script>
+<script src="scripts/services/menuservice.js"></script>
+<script src="scripts/services/modalservice.js"></script>
+<script src="scripts/services/storage.js"></script>
+<script src="scripts/services/user.js"></script>
+
 <!-- endbuild -->
 <!-- build:js({.tmp,app}) scripts/kedavra_dist.js -->
 <script src="scripts/misc/kedavra.js"></script>
-<script src="scripts/controllers/cfp.js"></script>
-<script src="scripts/directives/speaker.js"></script>
 <!-- endbuild -->
 
 </body>

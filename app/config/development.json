@@ -6,6 +6,18 @@
     "contact": "info@gr8conf.eu",
     "blogUrl": "sbglasius.tumblr.com",
     "blogApiKey": "7rXNPh2ZCj2xa12qknvyQyBl1foeXM9q9CThjcQyf3JsTqEZ1I"
-
+  },
+  "API": {
+    "status": "http://localhost:8081/gr8conf-cfp/api2/status/",
+    "speakers": "http://localhost:8081/gr8conf-cfp/api2/speakers/",
+    "talks": "http://localhost:8081/gr8conf-cfp/api2/talks/",
+    "agenda": "http://localhost:8081/gr8conf-cfp/api2/agenda/",
+    "getCode": "http://localhost:8081/gr8conf-cfp/api/user/code",
+    "getUser": "http://localhost:8081/gr8conf-cfp/api/user/get",
+    "loadFavorites": "http://localhost:8081/gr8conf-cfp/api/favorites/get",
+    "saveFavorite": "http://localhost:8081/gr8conf-cfp/api/favorites/put",
+    "loadRatings": "http://localhost:8081/gr8conf-cfp/api/ratings/get",
+    "saveRating": "http://localhost:8081/gr8conf-cfp/api/ratings/put"
   }
 }
+
