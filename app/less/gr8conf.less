@@ -53,7 +53,6 @@
   }
 }
 
-
 .technologies {
   margin-top: 20px;
   ul[rn-carousel] {
@@ -111,14 +110,18 @@
 }
 
 .speaker {
-  a { text-decoration: none; }
+  a {
+    text-decoration: none;
+  }
 
   img.speakerImg {
     width: 100px;
     margin-right: 10px;
   }
   .speaker-detail {
-    a { color: @text-color }
+    a {
+      color: @text-color;
+    }
   }
 
   div.speaker-detail {
@@ -130,4 +133,18 @@
   margin-bottom: 10px;
 }
 
+.talk {
+  a {
+    text-decoration: none;
+    color:@text-color;
+  }
+
+  .label {
+    margin-left: 3px;
+    display: inline-block;
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
 

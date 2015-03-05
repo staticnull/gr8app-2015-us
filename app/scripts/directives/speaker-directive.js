@@ -11,7 +11,7 @@ angular.module('gr8conf2015')
     return {
       restrict: "E",
       replace: false,
-      templateUrl: 'views/templates/speaker.html',
+      templateUrl: 'views/templates/speaker-template.html',
       scope: {
         speaker: '=',
         detailed: '='
@@ -23,7 +23,7 @@ angular.module('gr8conf2015')
     return {
       restrict: "E",
       replace: false,
-      templateUrl: 'views/templates/speakerCarousel.html',
+      templateUrl: 'views/templates/speaker-carousel-template.html',
       scope: {
         speaker: '='
       }

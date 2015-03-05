@@ -59,6 +59,11 @@ angular
         controller: 'SpeakerCtrl',
         scroll: 'page'
       })
+      .when('/talks', {
+        templateUrl: base + '/talks.html',
+        controller: 'TalksCtrl',
+        scroll: 'page'
+      })
       .when('/about', {
         templateUrl: base + '/about.html',
         controller: 'AboutCtrl',
