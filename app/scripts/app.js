@@ -99,9 +99,7 @@ angular
       {id: 4, img: 'gradle', title: "Gradle", url: "http://gradle.org"},
       {id: 5, img: 'boot', title: "Spring Boot", url: "http://projects.spring.io/spring-boot"},
       {id: 6, img: 'spock', title: "Spock", url: "http://spockframework.org/"},
-      {id: 7, img: 'gpars', title: "GPars", url: "http://gpars.org/"},
-      {id: 8, img: 'angularjs', title: "AngularJS", url: "http://angularjs.org"},
-      {id: 9, img: 'html5', title: "HTML5", url: "http://www.w3.org/TR/html5"},
+      {id: 7, img: 'angularjs', title: "AngularJS", url: "http://angularjs.org"}
     ];
     backendService.bootstrap();
 

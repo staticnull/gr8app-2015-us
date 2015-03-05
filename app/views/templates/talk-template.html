@@ -6,13 +6,22 @@
       <div><span class="label label-primary" ng-repeat="tag in talk.tags">{{tag}}</span></div>
     </div>
   </div>
-  <div ng-show="detailed">
-    <h3>{{talk.title}}</h3>
-    <ul>
-      <li ng-repeat="speaker in talk.speakers">
-        <a ng-href="#speaker/{{getSpeaker(speaker).twitter}}">{{speaker.name}}</a>
-      </li>
-    </ul>
+  <div ng-show="detailed" class="detailed">
+    <div class="row">
+      <div class="col-sm-8 col-xs-12">
+        <h3>{{talk.title}}</h3>
+        <ul>
+          <li ng-repeat="speaker in talk.speakers">
+            <img ng-src="{{getSpeaker(speaker).image}}" class="speaker-img img-circle"/><a ng-href="#speaker/{{getSpeaker(speaker).twitter}}">{{speaker.name}}</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col-sm-4  hide-for-small-down text-right">
+        <span class="label label-primary" ng-repeat="tag in talk.tags">{{tag}}</span>
+
+      </div>
+    </div>
     <h4>Description</h4>
 
     <div ng-bind-html="talk.summary"></div>
