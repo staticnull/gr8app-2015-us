@@ -2,17 +2,17 @@
   <div ng-hide="detailed">
     <div class="talk-detail">
       <a ng-href="#talk/{{talk.id}}">{{talk.title}}</a>
+
       <div><span class="label label-primary" ng-repeat="tag in talk.tags">{{tag}}</span></div>
     </div>
   </div>
   <div ng-show="detailed">
-
-    <div ng-repeat="speaker in talk.speakers">
-      <a href="" ng-click="scrollTo('speaker' + speaker.id, 'talk->speaker',speaker.name)">
-        {{speaker.name}}
-
-      </a>
-    </div>
+    <h3>{{talk.title}}</h3>
+    <ul>
+      <li ng-repeat="speaker in talk.speakers">
+        <a ng-href="#speaker/{{speaker.id}}">{{speaker.name}}</a>
+      </li>
+    </ul>
     <h4>Description</h4>
 
     <div ng-bind-html="talk.summary"></div>

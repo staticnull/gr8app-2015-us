@@ -12,6 +12,7 @@
     "status": "http://cfp.gr8conf.org/api2/status/",
     "speakers": "http://cfp.gr8conf.org/api2/speakers/",
     "talks": "http://cfp.gr8conf.org/api2/talks/",
+    "tags": "http://cfp.gr8conf.org/api2/tags/",
     "agenda": "http://cfp.gr8conf.org/api2/agenda/",
     "getCode": "http://cfp.gr8conf.org/api/user/code",
     "getUser": "http://cfp.gr8conf.org/api/user/get",

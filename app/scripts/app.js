@@ -54,7 +54,7 @@ angular
         controller: 'SpeakersCtrl',
         scroll: 'page'
       })
-      .when('/speaker/:twitterHandle', {
+      .when('/speaker/:id', {
         templateUrl: base + '/speaker.html',
         controller: 'SpeakerCtrl',
         scroll: 'page'
@@ -62,6 +62,11 @@ angular
       .when('/talks', {
         templateUrl: base + '/talks.html',
         controller: 'TalksCtrl',
+        scroll: 'page'
+      })
+      .when('/talk/:id', {
+        templateUrl: base + '/talk.html',
+        controller: 'TalkCtrl',
         scroll: 'page'
       })
       .when('/about', {

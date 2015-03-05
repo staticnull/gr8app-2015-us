@@ -11,6 +11,7 @@
     "status": "http://localhost:8081/gr8conf-cfp/api2/status/",
     "speakers": "http://localhost:8081/gr8conf-cfp/api2/speakers/",
     "talks": "http://localhost:8081/gr8conf-cfp/api2/talks/",
+    "tags": "http://localhost:8081/gr8conf-cfp/api2/tags/",
     "agenda": "http://localhost:8081/gr8conf-cfp/api2/agenda/",
     "getCode": "http://localhost:8081/gr8conf-cfp/api/user/code",
     "getUser": "http://localhost:8081/gr8conf-cfp/api/user/get",
