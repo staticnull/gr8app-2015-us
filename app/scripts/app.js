@@ -23,7 +23,7 @@ angular
     'config',
     'ui.bootstrap'
   ])
-  .config(function ($routeProvider, CONFERENCE, ENV, API) {
+  .config(function ($routeProvider, $locationProvider, CONFERENCE, ENV, API) {
     console.debug(CONFERENCE, ENV, API);
     var base = 'views/' + CONFERENCE.base;
     $routeProvider
@@ -53,7 +53,11 @@ angular
         templateUrl: base + '/speakers.html',
         controller: 'SpeakersCtrl',
         scroll: 'page'
-
+      })
+      .when('/speaker/:twitterHandle', {
+        templateUrl: base + '/speaker.html',
+        controller: 'SpeakerCtrl',
+        scroll: 'page'
       })
       .when('/about', {
         templateUrl: base + '/about.html',

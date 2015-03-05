@@ -6,10 +6,10 @@ angular.module('gr8conf2015')
         $http.get(API.speakers + CONFERENCE.id).
           success(function (data) {
             var featuredSpeakers = _.filter(data, function(speaker) {
-              return speaker.featuredSpeakers
+              return speaker.featured
             });
             var speakers = _.filter(data, function(speaker) {
-              return !speaker.featuredSpeakers
+              return !speaker.featured
             });
 
             storage.put('featuredSpeakers', featuredSpeakers);
@@ -93,8 +93,8 @@ angular.module('gr8conf2015')
     this.bootstrap = function () {
       $http.get(API.status + CONFERENCE.id).
         success(function (data) {
-          var status = (ENV.name === 'development' ? {} : storage.get('status') || {});
-          console.debug("Reoad data? ", ENV.name, status, data)
+          var status = (API.reload ? {} : storage.get('status') || {});
+          console.debug("Reoad data? ", API.reload, status, data);
           loadSpeakers(status.speakers != data.speakers);
           loadTalks(status.talks != data.talks);
           loadAgenda(status.agenda != data.agenda);
@@ -125,17 +125,11 @@ angular.module('gr8conf2015')
         return talk.id == id
       })
     };
-    this.getSpeaker = function (id) {
-      var speakers = storage.get('speakers') || [];
-      return _.find(speakers, function (speaker) {
-        return speaker.id == id
-      })
-    };
-
-    this.getSpeaker = function (id) {
-      var speakers = storage.get('speakers') || [];
-      return _.find(speakers, function (speaker) {
-        return speaker.id == id
+    this.getSpeaker = function (twitterHandle) {
+      return _.find(storage.get('featuredSpeakers') || [], function (speaker) {
+          return speaker.twitter == twitterHandle
+        }) || _.find(storage.get('speakers') || [], function (speaker) {
+        return speaker.twitter == twitterHandle
       })
     };
 

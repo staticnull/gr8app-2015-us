@@ -8,6 +8,7 @@
     "blogApiKey": "7rXNPh2ZCj2xa12qknvyQyBl1foeXM9q9CThjcQyf3JsTqEZ1I"
   },
   "API": {
+    "reload": true,
     "status": "http://cfp.gr8conf.org/api2/status/",
     "speakers": "http://cfp.gr8conf.org/api2/speakers/",
     "talks": "http://cfp.gr8conf.org/api2/talks/",

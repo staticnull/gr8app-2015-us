@@ -13,12 +13,9 @@ angular.module('gr8conf2015')
       replace: false,
       templateUrl: 'views/templates/speaker.html',
       scope: {
-        speaker: '='
+        speaker: '=',
+        detailed: '='
       }
-      //,
-      //controller: ['$scope','scrollService',function($scope, scrollService) {
-      //  $scope.scrollTo = scrollService.scrollTo
-      //}]
     };
   });
 angular.module('gr8conf2015')
@@ -30,9 +27,5 @@ angular.module('gr8conf2015')
       scope: {
         speaker: '='
       }
-      //,
-      //controller: ['$scope','scrollService',function($scope, scrollService) {
-      //  $scope.scrollTo = scrollService.scrollTo
-      //}]
     };
   });
