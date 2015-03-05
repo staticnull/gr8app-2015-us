@@ -1,8 +1,8 @@
 <div class="speaker" id="speaker{{speaker.id}}">
   <div ng-hide="detailed">
     <div class="speaker-detail">
-      <img ng-src="{{speaker.image}}" class="speakerImg img-circle pull-left"/>
-      <h4>{{speaker.name}}</h4>
+      <a ng-href="#speaker/{{speaker.twitter}}"><img ng-src="{{speaker.image}}" class="speakerImg img-circle pull-left"/></a>
+      <h4><a ng-href="#speaker/{{speaker.twitter}}">{{speaker.name}}</a></h4>
 
       <p>{{speaker.employer}}</p>
 
@@ -16,10 +16,14 @@
     <h2>{{speaker.name}}</h2>
     <h5 ng-show="speaker.employer">{{speaker.employer}}</h5>
     <div class="social-icons">
-      <a class="fa fa-twitter" href="http://twitter.com/{{speaker.twitter}}">{{speaker.twitter}}</a>
+      <a class="fa fa-twitter" href="http://twitter.com/{{speaker.twitter}}">&nbsp;{{speaker.twitter}}</a>
     </div>
     <h3>Bio:</h3>
     <p ng-bind-html="speaker.bio"></p>
+    <h3>Talks:</h3>
+    <ul>
+      <li ng-repeat="talk in speaker.talks"><a ng-href="#talk/{{talk.id}}">{{talk.title}}</a></li>
+    </ul>
   </div>
 
 </div>
