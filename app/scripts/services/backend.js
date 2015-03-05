@@ -130,7 +130,14 @@ angular.module('gr8conf2015')
         return talk.id == id
       })
     };
-    this.getSpeaker = function (id) {
+    this.getSpeaker = function (twitterHandle) {
+      return _.find(storage.get('featuredSpeakers') || [], function (speaker) {
+          return speaker.twitter == twitterHandle
+        }) || _.find(storage.get('speakers') || [], function (speaker) {
+          return speaker.twitter == twitterHandle
+        })
+    };
+    this.getSpeakerById = function (id) {
       return _.find(storage.get('featuredSpeakers') || [], function (speaker) {
           return speaker.id == id
         }) || _.find(storage.get('speakers') || [], function (speaker) {

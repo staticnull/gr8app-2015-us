@@ -10,7 +10,7 @@
     <h3>{{talk.title}}</h3>
     <ul>
       <li ng-repeat="speaker in talk.speakers">
-        <a ng-href="#speaker/{{speaker.id}}">{{speaker.name}}</a>
+        <a ng-href="#speaker/{{getSpeaker(speaker).twitter}}">{{speaker.name}}</a>
       </li>
     </ul>
     <h4>Description</h4>

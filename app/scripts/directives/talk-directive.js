@@ -7,6 +7,11 @@ angular.module('gr8conf2015')
       scope: {
         talk: '=',
         detailed: '='
-      }
+      },
+      controller: ['$scope','backendService', function($scope, backendService) {
+        $scope.getSpeaker = function(speaker) {
+          return backendService.getSpeakerById(speaker.id)
+        }
+      }]
     };
   });
