@@ -31,10 +31,11 @@
 </section>
 <section class="page-block">
   <!--Team Carousel-->
-  <div class="speakers-carousel" ng-controller="SpeakersCtrl">
+  <h4 class="text-center">Featured speakers:</h4>
+  <div class="speakers-carousel" ng-controller="FeaturedSpeakersCtrl">
 
     <ul rn-carousel rn-carousel-index="0" rn-carousel-auto-slide="5" rn-carousel-transition="hexagon" rn-carousel-buffered rn-carousel-controls>
-      <li ng-repeat="speaker in speakers">
+      <li ng-repeat="speaker in featuredSpeakers">
 
         <div class="ms-slide">
           <speaker-carousel speaker="speaker"/>

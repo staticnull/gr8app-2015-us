@@ -5,23 +5,16 @@ angular.module('gr8conf2015')
       if (reload) {
         $http.get(API.speakers + CONFERENCE.id).
           success(function (data) {
-            storage.put('speakers', data);
-            $rootScope.$broadcast('loaded', ['speakers', data]);
-          })
-      } else {
-        $rootScope.$broadcast('loaded', ['speakers', storage.get('speakers')]);
-      }
-    }
+            var featuredSpeakers = _.filter(data, function(speaker) {
+              return speaker.featuredSpeakers
+            });
+            var speakers = _.filter(data, function(speaker) {
+              return !speaker.featuredSpeakers
+            });
 
-    function loadFeaturedSpeakers(reload) {
-      if (reload) {
-        $http.get(API.speakers + CONFERENCE.id+ '/true').
-          success(function (data) {
-            storage.put('featuredSpeakers', data);
-            $rootScope.$broadcast('loaded', ['featuredSpeakers', data]);
+            storage.put('featuredSpeakers', featuredSpeakers);
+            storage.put('speakers', speakers);
           })
-      } else {
-        $rootScope.$broadcast('loaded', ['speakers', storage.get('speakers')]);
       }
     }
 
@@ -103,7 +96,6 @@ angular.module('gr8conf2015')
           var status = (ENV.name === 'development' ? {} : storage.get('status') || {});
           console.debug("Reoad data? ", ENV.name, status, data)
           loadSpeakers(status.speakers != data.speakers);
-          loadFeaturedSpeakers(status.speakers != data.speakers);
           loadTalks(status.talks != data.talks);
           loadAgenda(status.agenda != data.agenda);
 

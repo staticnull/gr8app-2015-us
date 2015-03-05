@@ -1,59 +1,13 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name gr8app2015App.controller:SpeakersCtrl
- * @description
- * # SpeakersCtrl
- * Controller of the gr8app2015App
- */
-angular.module('gr8conf2015')
-  .controller('SpeakersCtrl', function ($scope) {
-    $scope.speakers = [
-      {
-        id: 54,
-        name: "Graeme Rocher",
-        company: "Pivotal",
-        twitter: "graemerocher",
-        image: "http://localhost:8081/gr8conf-cfp/profile/img/54",
-        bio: "<p>Graeme is the project lead of the Grails project.</p>",
-        talks: []
-      },
-      {
-        id: 34,
-        name: "Guillaume Laforge",
-        company: "Pivotal",
-        twitter: "glaforge",
-        image: "http://localhost:8081/gr8conf-cfp/profile/img/34",
-        bio: "<p>Guillaume is the project lead of the Groovy programming language project.</p>",
-        talks: []
-      },
-      {
-        id: 28,
-        name: "Lari Hotari",
-        company: "Pivotal Software, Inc.",
-        twitter: "lhotari",
-        image: "http://localhost:8081/gr8conf-cfp/profile/img/28",
-        bio: "<p>Lari is a Grails Team Member at Pivotal. </p>",
-        talks: []
-      },
-      {
-        id: 36,
-        name: "Marco Vermeulen",
-        company: "Self Employed",
-        twitter: "marcoVermeulen",
-        image: "http://localhost:8081/gr8conf-cfp/profile/img/36",
-        bio: "<p>Marco is a South African Software Developer who works and lives in London. ",
-        talks: []
-      },{
-        id: 11,
-        name: "Peter Ledbrook",
-        company: "Self employed",
-        twitter: "pledbrook",
-        image: "http://localhost:8081/gr8conf-cfp/profile/img/11",
-        bio: "<p>Peter is a long time Java developer, Grails user and plugin author. </p>",
-        talks: []
-      }
-    ]
-
+angular.module('gr8conf2015').controller('SpeakersCtrl', ['$scope', 'storage', function ($scope, storage) {
+  $scope.$on('storage.put.speakers', function (event, args) {
+    $scope.speakers = args;
   });
+  $scope.$on('storage.put.featuredSpeakers', function (event, args) {
+    $scope.featuredSpeakers = args;
+  });
+
+  $scope.speakers = storage.get('speakers');
+  $scope.featuredSpeakers = storage.get('featuredSpeakers');
+}]);

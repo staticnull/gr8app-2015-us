@@ -17,7 +17,7 @@ angular.module('gr8conf2015').service('storage', ['$log', '$rootScope', function
     put: function (key, value) {
       localStorage[key] = angular.toJson(value);
 
-      $rootScope.$broadcast('storage.put', key, value)
+      $rootScope.$broadcast('storage.put.'+key, value)
 
     },
     remove: function (key) {

@@ -1,0 +1,23 @@
+{
+  "CONFERENCE": {
+    "id": 3,
+    "base": "eu",
+    "name": "GR8Conf EU-2015",
+    "contact": "info@gr8conf.eu",
+    "blogUrl": "sbglasius.tumblr.com",
+    "blogApiKey": "7rXNPh2ZCj2xa12qknvyQyBl1foeXM9q9CThjcQyf3JsTqEZ1I"
+  },
+  "API": {
+    "status": "http://cfp.gr8conf.org/api2/status/",
+    "speakers": "http://cfp.gr8conf.org/api2/speakers/",
+    "talks": "http://cfp.gr8conf.org/api2/talks/",
+    "agenda": "http://cfp.gr8conf.org/api2/agenda/",
+    "getCode": "http://cfp.gr8conf.org/api/user/code",
+    "getUser": "http://cfp.gr8conf.org/api/user/get",
+    "loadFavorites": "http://cfp.gr8conf.org/api/favorites/get",
+    "saveFavorite": "http://cfp.gr8conf.org/api/favorites/put",
+    "loadRatings": "http://cfp.gr8conf.org/api/ratings/get",
+    "saveRating": "http://cfp.gr8conf.org/api/ratings/put"
+  }
+}
+
