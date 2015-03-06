@@ -99,7 +99,8 @@ angular
       {id: 4, img: 'gradle', title: "Gradle", url: "http://gradle.org"},
       {id: 5, img: 'boot', title: "Spring Boot", url: "http://projects.spring.io/spring-boot"},
       {id: 6, img: 'spock', title: "Spock", url: "http://spockframework.org/"},
-      {id: 7, img: 'angularjs', title: "AngularJS", url: "http://angularjs.org"}
+      {id: 7, img: 'geb', title: "Geb", url: "http://gebish.org/"},
+      {id: 8, img: 'angularjs', title: "AngularJS", url: "http://angularjs.org"}
     ];
     backendService.bootstrap();
 
