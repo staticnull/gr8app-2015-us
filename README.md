@@ -12,4 +12,4 @@ ENV=gr8conf-eu grunt build
 
 ```
 
-to get a dist version.
+to get a dist version, where ENV=xxx is the configuration file to use (see app/config for options)
