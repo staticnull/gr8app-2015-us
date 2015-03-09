@@ -84,6 +84,7 @@ angular
       var element = document.getElementById('page');
       smoothScroll(element, {offset: 50});
     };
+    $rootScope.conferenceName = CONFERENCE.name;
     $rootScope.eventImageCss = 'event-' + CONFERENCE.base;
     $rootScope.logoUrl = 'views/' + CONFERENCE.base + '/templates/logo.html';
     $rootScope.menuUrl = 'views/' + CONFERENCE.base + '/templates/menu.html';

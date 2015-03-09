@@ -1,7 +1,7 @@
 <div class="speaker" id="speaker{{speaker.id}}">
     <div class="speaker-detail text-center">
-      <img src="{{speaker.image}}" class="speaker-img img-circle"/>
-      <h4>{{speaker.name}}</h4>
+      <a ng-href="#speaker/{{speaker.twitter}}"><img ng-src="{{speaker.image}}" class="speaker-img img-circle"/></a>
+      <h4><a ng-href="#speaker/{{speaker.twitter}}">{{speaker.name}}</a></h4>
       <p class="speaker-bio text-primary" ng-bind-html="speaker.shortBio"></p>
 
   </div>

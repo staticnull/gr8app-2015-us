@@ -8,10 +8,10 @@
  * Controller of the gr8app2015App
  */
 angular.module('gr8conf2015')
-  .controller('FeaturedSpeakersCtrl', function ($scope) {
-    $scope.$on('loaded', function(event, args) {
-      if (args[0] === "featuredSpeakers") {
-        $scope.featuredSpeakers = args[1];
-      }
+  .controller('FeaturedSpeakersCtrl', ['$scope','storage',function ($scope,storage) {
+    $scope.$on('storage.put.featuredSpeakers', function (event, args) {
+      $scope.featuredSpeakers = args;
     });
-  });
+
+    $scope.featuredSpeakers = storage.get('featuredSpeakers');
+  }]);
