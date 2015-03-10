@@ -8,9 +8,7 @@ angular.module('gr8conf2015')
             var featuredSpeakers = _.filter(data, function (speaker) {
               return speaker.featured
             });
-            var speakers = _.filter(data, function (speaker) {
-              return !speaker.featured
-            });
+            var speakers = data;
 
             storage.put('featuredSpeakers', featuredSpeakers);
             storage.put('speakers', speakers);

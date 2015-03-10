@@ -21,7 +21,8 @@ angular
     'angular-parallax',
     'angular-carousel',
     'config',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'autoActive'
   ])
   .config(function ($routeProvider, $locationProvider, CONFERENCE, ENV, API) {
     console.debug(CONFERENCE, ENV, API);

@@ -18,9 +18,9 @@
     <div class="social-icons">
       <a class="fa fa-twitter" href="http://twitter.com/{{speaker.twitter}}">&nbsp;{{speaker.twitter}}</a>
     </div>
-    <h3>Bio:</h3>
+    <h3>Bio</h3>
     <p ng-bind-html="speaker.bio"></p>
-    <h3>Talks:</h3>
+    <h3>Talks</h3>
     <ul>
       <li ng-repeat="talk in speaker.talks"><a ng-href="#talk/{{talk.id}}">{{talk.title}}</a></li>
     </ul>
