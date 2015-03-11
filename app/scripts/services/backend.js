@@ -82,7 +82,6 @@ angular.module('gr8conf2015')
       if (AuthService.isLoggedIn()) {
         var user = AuthService.currentUser();
         var params = angular.extend({}, {'conference.id': CONFERENCE.id, uuid: user.uuid, 'talk.id': id}, data)
-        console.debug("Save rating", params);
         $http.get(API.saveRating, {params: params}).
           success(function (data) {
             storage.put('ratings', data);
@@ -96,7 +95,6 @@ angular.module('gr8conf2015')
       $http.get(API.status + CONFERENCE.id).
         success(function (data) {
           var status = (API.reload ? {} : storage.get('status') || {});
-          console.debug("Reoad data? ", API.reload, status, data);
           loadSpeakers(status.speakers != data.speakers);
           loadTalks(status.talks != data.talks);
           loadTags();

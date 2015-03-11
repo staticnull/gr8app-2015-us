@@ -25,7 +25,6 @@ angular
     'autoActive'
   ])
   .config(function ($routeProvider, $locationProvider, CONFERENCE, ENV, API) {
-    console.debug(CONFERENCE, ENV, API);
     var base = 'views/' + CONFERENCE.base;
     $routeProvider
       .when('/', {

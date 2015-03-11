@@ -9,6 +9,5 @@
  */
 angular.module('gr8conf2015')
   .controller('MenuCtrl', ['$scope',  '$location', function ($scope,  $location) {
-    console.debug("Menu",$location)
 
   }]);

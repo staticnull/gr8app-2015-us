@@ -9,5 +9,4 @@
  */
 angular.module('gr8conf2015')
   .controller('FrontCtrl', function ($scope, ENV) {
-    console.debug(ENV);
   });

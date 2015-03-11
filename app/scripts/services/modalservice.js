@@ -23,7 +23,6 @@ angular.module('gr8conf2015')
           $scope.input = {name: twitterInfo.name};
 
           $scope.save = function () {
-            console.debug('name:', this.input.name, ', email: ', this.input.email);
             AuthService.relogin(this.input.name, this.input.email);
             $modalInstance.dismiss('cancel')
           };
@@ -89,7 +88,6 @@ angular.module('gr8conf2015')
           $scope.showSpeakerQuality(data.speakerQuality);
 
           $scope.save = function () {
-            console.debug($scope.data);
             $rootScope.$broadcast('saveRating', [id, $scope.data]);
             $modalInstance.dismiss('cancel');
           };
