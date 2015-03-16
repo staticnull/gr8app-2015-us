@@ -69,6 +69,16 @@ angular
         controller: 'TalkCtrl',
         scroll: 'page'
       })
+      .when('/agenda', {
+        templateUrl: base + '/agenda.html',
+        controller: 'AgendaCtrl',
+        scroll: 'page'
+      })
+      .when('/agenda/:currentDay', {
+        templateUrl: base + '/agenda.html',
+        controller: 'AgendaCtrl',
+        scroll: 'page'
+      })
       .when('/about', {
         templateUrl: base + '/about.html',
         controller: 'AboutCtrl',

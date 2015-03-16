@@ -1,0 +1,23 @@
+<div class="agendaItem {{small}}" style="top:{{topValue}}px;bottom:{{topValue+height}};max-height:{{height}}px;height:{{height}}px;background-color:{{color}}">
+    <div class="agendaTimeStart">
+        {{start}}
+        <span ng-show="showRoom">
+            (<em>{{room}}</em>)
+        </span>
+    </div>
+    <div class="agendaFavorite">
+        <favorite id="item.talk.id"></favorite>
+    </div>
+    <div class="agendaTimeEnd">
+        {{end}}
+    </div>
+    <div class="agendaItemInner">
+        <span class="agendaTalk">
+             <a href="" ng-href="#talk/{{item.talk.id}}">{{item.talk.title}}</a>
+        </span>
+        <br ng-show="break"/>
+        <span class="agendaSpeaker">
+            (<span ng-repeat="speaker in speakers" class="agendaSpeakerName"><a ng-href="#speaker/{{speaker.twitter}}">{{speaker.name}}</a>{{$last ? '' : ', '}}</span>)
+        </span>
+    </div>
+</div>

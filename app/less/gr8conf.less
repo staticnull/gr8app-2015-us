@@ -142,8 +142,8 @@
   .detailed {
     ul {
       list-style-type: none;
-      padding: 0px;
-      margin: 0px;
+      padding: 0;
+      margin: 0;
       li {
         padding-left: 15px;
         .speaker-img {
@@ -166,3 +166,150 @@
   }
 }
 
+
+.agenda {
+  .agenda-title {
+    font-size: 20px;
+    font-weight: bold;
+    max-height: 60px;
+  }
+  .agenda-room {
+    font-size: 18px;
+    font-weight: bold;
+    color: #999;
+    margin-top: 6px;
+  }
+  .agenda-times {
+    position: relative;
+    float: left;
+    height: 100%;
+    div {
+      height: 60px;
+    }
+  }
+  .agenda-track {
+    position: relative;
+    float: left;
+    height: 100%;
+  }
+  //    background-color: #FFFFFF;
+  text-align: center;
+  line-height: 14px;
+  .agendaItem {
+    .agendaTimeStart {
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      font-size: x-small;
+    }
+    .agendaTimeEnd {
+      position: absolute;
+      bottom: 3px;
+      left: 2px;
+      font-size: x-small;
+
+    }
+    .agendaFavorite {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .agendaItemInner {
+      margin-left: 35px;
+      margin-right: 16px;
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+      .agendaTalk {
+        font-weight: bold;
+        font-size: 110%;
+      }
+      .agendaSpeaker {
+        color: #444;
+        white-space: nowrap;
+      }
+    }
+    border-radius: 2px;
+    overflow-y: hidden;
+    max-height: 60px;
+    color: #000000;
+    position: absolute;
+    width: 100%;
+    border: 1px solid black;
+    padding: 3px;
+    &.small-row {
+      padding: 0;
+      .agendaTimeStart {
+        top: 0;
+      }
+      .agendaTimeEnd {
+        display: none;
+      }
+      .agendaFavorite {
+        top: -2px;
+      }
+    }
+  }
+  .breakItem {
+    border-radius: 2px;
+    max-height: 60px;
+    color: #808080;
+    background-color: rgba(0,0,0, 0.1);
+    position: absolute;
+    width: 100%;
+    border: 1px solid rgba(0,0,0, 0.5);
+    padding: 3px;
+    font-size: small;
+  }
+  .breakIcon {
+    border: none;
+    max-height: 60px;
+    color: darkgrey;
+    position: absolute;
+    width: 100%;
+    .fa {
+      font-size: 1.5em;
+    }
+    padding: 3px;
+  }
+
+}
+
+.agenda-days {
+  width: 100%;
+  .btn {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+}
+@media (max-width: 767px) {
+  .pageheader-default h1 {
+    font-size: 15px;
+  }
+
+  .pageheader-default h1.large {
+    font-size: 20px;
+  }
+
+  .page-description {
+    font-size: 15px;
+  }
+
+  iframe.youtube {
+    height: 180px;
+    width: 300px;
+  }
+
+  .agenda-outer {
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    .agenda-inner {
+      width: 200%;
+      position: absolute;
+
+    }
+  }
+}

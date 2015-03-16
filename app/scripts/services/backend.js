@@ -37,10 +37,7 @@ angular.module('gr8conf2015')
         $http.get(API.agenda + CONFERENCE.id).
           success(function (data) {
             storage.put('agenda', data);
-            $rootScope.$broadcast('loaded', ['agenda', data]);
           })
-      } else {
-        $rootScope.$broadcast('loaded', ['agenda', storage.get('agenda')]);
       }
     }
 
