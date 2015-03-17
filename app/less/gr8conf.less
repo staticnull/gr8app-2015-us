@@ -294,6 +294,13 @@
     margin-bottom: 10px !important;
   }
 }
+.agenda-outer {
+  font-size: 12px;
+  .swipe {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .pageheader-default h1 {
     font-size: 15px;
@@ -316,10 +323,14 @@
     width: 100%;
     overflow: auto;
     position: relative;
+    .swipe {
+      display: block;
+      padding-bottom: 5px;
+      color: #999;
+    }
     .agenda-inner {
       width: 200%;
       position: absolute;
-
     }
   }
 }
