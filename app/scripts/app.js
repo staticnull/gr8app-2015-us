@@ -24,7 +24,7 @@ angular
     'ui.bootstrap',
     'autoActive'
   ])
-  .config(function ($routeProvider, $locationProvider, CONFERENCE, ENV, API) {
+  .config(['$routeProvider', '$locationProvider', 'CONFERENCE', 'ENV', 'API', function ($routeProvider, $locationProvider, CONFERENCE, ENV, API) {
     var base = 'views/' + CONFERENCE.base;
     $routeProvider
       .when('/', {
@@ -87,7 +87,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);
 angular
   .module('gr8conf2015').run(['$rootScope', 'smoothScroll', 'backendService', 'CONFERENCE', function ($rootScope, smoothScroll, backendService, CONFERENCE) {
     $rootScope.scrollToTop = function () {
