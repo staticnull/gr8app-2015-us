@@ -46,6 +46,7 @@ angular.module('gr8conf2015')
         var item = $scope.item;
         $scope.topValue = (convertTimeToInteger(item.start) - $scope.startHour + 1) * 60;
         $scope.height = (convertTimeToInteger(item.end) - convertTimeToInteger(item.start + 1)) * 60;
+        $scope.small = $scope.height < 20 ? 'small' : '';
       }]
     };
   }).directive('breakIcon', function () {
@@ -63,6 +64,7 @@ angular.module('gr8conf2015')
         item.icon = item.icon.replace('food', 'cutlery').replace('icon', 'fa');
         $scope.topValue = (convertTimeToInteger(item.start) - $scope.startHour + 1) * 60;
         $scope.height = (convertTimeToInteger(item.end) - convertTimeToInteger(item.start + 1)) * 60;
+        $scope.small = $scope.height < 20 ? 'small' : '';
       }]
     };
   });

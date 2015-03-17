@@ -3,7 +3,7 @@
     <h1>Agenda</h1>
 
     <div class="container">
-      <div class="row">
+      <div class="row agenda-days" >
         <div class="col-xs-12 col-md-12">
           <div class="btn-group agenda-days">
             <a style="width: {{dayTabWidth}}%" ng-repeat="day in agenda" class="btn btn-primary {{activeDay(day.day)}}" ng-href="#/agenda/{{day.day}}">

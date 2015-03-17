@@ -262,6 +262,11 @@
     border: 1px solid rgba(0,0,0, 0.5);
     padding: 3px;
     font-size: small;
+    &.small {
+      font-size: 8px;
+      padding-top: 1px;
+      line-height: 7px;
+    }
   }
   .breakIcon {
     border: none;
@@ -273,6 +278,11 @@
       font-size: 1.5em;
     }
     padding: 3px;
+    &.small {
+      .fa {
+        font-size: 0.8em;
+      }
+    }
   }
 
 }
@@ -311,5 +321,29 @@
       position: absolute;
 
     }
+  }
+}
+
+
+@media print {
+  .agenda-outer {
+    width: auto;
+    .agenda-inner {
+      width: auto;
+      position: relative;
+    }
+  }
+  h1 {
+    font-size: 2em;
+  }
+  a[href]:after {
+    content: '';
+  }
+  .header.scroller {
+    .inner {
+      height: 80px;
+    }}
+  #hero, #menu, .footer, .copyright, .sticky-btns, .navigation, .holder, .agenda-days, .tools {
+    display: none;
   }
 }
