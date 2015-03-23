@@ -3,22 +3,22 @@ angular.module('gr8conf2015')
 
 
     $scope.$on('storage.put.agenda', function (event, args) {
-      console.debug('storage.put.agenda',args);
       $scope.agenda = args
     });
 
-    $scope.agenda = storage.get('agenda');
 
     $scope.$watch('agenda', function () {
       var agenda = $scope.agenda;
       if (!agenda) return;
       $scope.dayTabWidth = 100 / agenda.length;
-      $scope.currentDay = $routeParams.currentDay || agenda[0].day;
     });
 
-    console.log("currentDay",$routeParams.currentDay);
+    $scope.agenda = storage.get('agenda');
+    $scope.currentDay = $routeParams.currentDay || storage.get('currentDay') || $scope.agenda[0].day;
+
     $scope.$watch('currentDay', function () {
       if (!$scope.currentDay) return;
+      storage.put('currentDay', $scope.currentDay);
 
       $scope.agendaDay = _.find($scope.agenda, function (e) {
         return e.day == $scope.currentDay;
@@ -47,10 +47,7 @@ angular.module('gr8conf2015')
     });
 
 
-    $scope.currentDay = $routeParams.currentDay;
-
     $scope.dayTitle = function (date) {
-      console.log("dayTitle", date)
       return date ? moment(date).format("MMMM D.") : ''
     };
 
