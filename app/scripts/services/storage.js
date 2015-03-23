@@ -5,7 +5,6 @@ angular.module('gr8conf2015').service('storage', ['$log', '$rootScope', function
   // Public API here
   return {
     get: function (key, failed) {
-      // TODO: Hack , Fix: make sure not to encode undefined on put
       var value = localStorage[key];
 
       if (value == "undefined")
@@ -16,13 +15,11 @@ angular.module('gr8conf2015').service('storage', ['$log', '$rootScope', function
     },
     put: function (key, value) {
       localStorage[key] = angular.toJson(value);
-
       $rootScope.$broadcast('storage.put.'+key, value)
-
     },
     remove: function (key) {
       localStorage.removeItem(key);
-      $rootScope.$broadcast('storage.remove', key)
+      $rootScope.$broadcast('storage.remove.'+key, key)
     },
 
     reset: function () {

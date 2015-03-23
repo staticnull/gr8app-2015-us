@@ -84,6 +84,11 @@ angular
         controller: 'AboutCtrl',
         scroll: 'page'
       })
+      .when('/registration', {
+        templateUrl: base + '/registration.html',
+        controller: 'RegistrationCtrl',
+        scroll: 'page'
+      })
       .otherwise({
         redirectTo: '/'
       });
