@@ -71,14 +71,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <form method="post" name="event-registration" class="light-version">
-                    <h5>Registration opens soon</h5>
-                    <button class="btn btn-outlined btn-lg btn-default" disabled="disabled" type="submit">
+                <div class="col-md-3" ng-controller="RegistrationCtrl">
+                    <a ng-href="{{registrationUrl}}" target="_blank" class="btn btn-outlined btn-lg btn-default">
                       <span class="text">Register here</span>
-                    </button>
-                  </form>
-                </div>
+                    </a>
+                 </div>
               </div>
             </div>
           </div>
