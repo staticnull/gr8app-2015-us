@@ -20,6 +20,29 @@
     "saveFavorite": "http://localhost:8081/gr8conf-cfp/api/favorites/put",
     "loadRatings": "http://localhost:8081/gr8conf-cfp/api/ratings/get",
     "saveRating": "http://localhost:8081/gr8conf-cfp/api/ratings/put"
-  }
-}
+  },
+  "SPONSORS": [
+    {
+      "name": "Platinum sponsor",
+      "sponsors": [
+        {
+          "name": "Nine",
+          "url": "https://nine.dk/",
+          "image": "images/eu/sponsors/nine.png",
+          "html": "eu/sponsors/_nine.html"
+        }
+      ]
+    },
+    {
+      "name": "Gold sponsors",
+      "sponsors": [
+        {
+          "name": "IntelliGrape",
+          "url": "https://intelligrape.com/",
+          "image": "images/eu/sponsors/intelligrape.png",
+          "html": "eu/sponsors/_intelligrape.html"
+        }
+      ]
+    }
+  ]}
 

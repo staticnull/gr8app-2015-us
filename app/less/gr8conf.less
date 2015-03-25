@@ -1,3 +1,5 @@
+@import "variables";
+
 .venue-map {
   height: 300px;
   padding: 0;
@@ -30,6 +32,9 @@
   &.event-eu {
     background-image: url('../images/eu/event.jpg');
   }
+}
+.btn-register {
+  border: white 1px solid;
 }
 
 .two-columns {
@@ -166,7 +171,6 @@
   }
 }
 
-
 .agenda {
   .agenda-title {
     font-size: 20px;
@@ -256,10 +260,10 @@
     border-radius: 2px;
     max-height: 60px;
     color: #808080;
-    background-color: rgba(0,0,0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     position: absolute;
     width: 100%;
-    border: 1px solid rgba(0,0,0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
     padding: 3px;
     font-size: small;
     &.small {
@@ -294,6 +298,7 @@
     margin-bottom: 10px !important;
   }
 }
+
 .agenda-outer {
   font-size: 12px;
   .swipe {
@@ -335,7 +340,6 @@
   }
 }
 
-
 @media print {
   .agenda-outer {
     width: auto;
@@ -344,18 +348,47 @@
       position: relative;
     }
   }
+
   h1 {
     font-size: 2em;
   }
+
   a[href]:after {
     content: '';
   }
+
   .header.scroller {
     .inner {
       height: 80px;
-    }}
+    }
+  }
+
   #hero, #menu, .footer, .copyright, .sticky-btns, .navigation, .holder, .agenda-days, .tools {
     display: none;
   }
 }
+
+.sponsors {
+  h4 {
+    text-align: center;
+  }
+  &.well {
+    background-color: fade(@brand-primary, 80%);
+  }
+  .sponsor {
+    text-align: center;
+    background-color: white;
+    img {
+      margin: auto;
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  h4 {
+    font-size: 100%
+  }
+}
+
 

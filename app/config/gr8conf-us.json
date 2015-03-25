@@ -21,5 +21,9 @@
     "saveFavorite": "http://cfp.gr8conf.org/api/favorites/put",
     "loadRatings": "http://cfp.gr8conf.org/api/ratings/get",
     "saveRating": "http://cfp.gr8conf.org/api/ratings/put"
-  }
+  },
+  "SPONSORS": [
+
+
+  ]
 }
