@@ -53,7 +53,7 @@
           <div class="col-xs-12 well sponsors" ng-repeat="sponsorGroup in sponsorGroups">
             <h4>{{sponsorGroup.name}}</h4>
             <div class="sponsor" ng-repeat="sponsor in sponsorGroup.sponsors">
-              <a ng-href="{{sponsor.url}}" target="_blank"><img ng-src="{{sponsor.image}}"/></a>
+              <a ng-href="{{sponsor.url}}" target="_blank"><img ng-src="{{sponsor.image}}" class="{{sponsorGroup.class}}"/></a>
             </div>
           </div>
         </div>

@@ -24,6 +24,7 @@
   "SPONSORS": [
     {
       "name": "Platinum sponsor",
+      "class": "platinum",
       "sponsors": [
         {
           "name": "Nine",
@@ -34,7 +35,8 @@
       ]
     },
     {
-      "name": "Gold sponsors",
+      "name": "Gold sponsor",
+      "class": "gold",
       "sponsors": [
         {
           "name": "IntelliGrape",
@@ -44,5 +46,6 @@
         }
       ]
     }
-  ]}
+  ]
+}
 
