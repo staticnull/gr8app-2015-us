@@ -62,7 +62,7 @@
                 <div class="col-md-9">
                   <!--Countdown-->
                   <div class="countdown smaller light align-left">
-                    <div class="timer" id="timer2" data-countdown-from="06/02/2015"></div>
+                    <div class="timer" id="timer2" data-countdown-from="07/29/2015"></div>
                     <div class="group">
                       <span>Days</span>
                       <span>Hours</span>
@@ -71,11 +71,24 @@
                     </div>
                   </div>
                 </div>
+
+				        <!--TODO: EU
                 <div class="col-md-3" ng-controller="RegistrationCtrl">
-                    <a ng-href="{{registrationUrl}}" target="_blank" class="btn  btn-lg btn-primary btn-register">
-                      <span class="text"><i class="fa fa-ticket"></i> Register here</span>
-                    </a>
-                 </div>
+                  <a ng-href="{{registrationUrl}}" target="_blank" class="btn  btn-lg btn-primary btn-register">
+                    <span class="text"><i class="fa fa-ticket"></i> Register here</span>
+                  </a>
+                </div>
+				        -->
+
+                <div class="col-md-3">
+                  <form method="post" name="event-registration" class="light-version">
+                    <h5>Registration opens soon</h5>
+                    <button class="btn btn-outlined btn-lg btn-default" disabled="disabled" type="submit">
+                      <span class="text">Register here</span>
+                    </button>
+                  </form>
+                </div>
+
               </div>
             </div>
           </div>
@@ -126,7 +139,8 @@
       <!--Header Close-->
 
       <!--Page Content-->
-      <div id="page" class="page">
+	    <!--TODO: Eparallax diff?-->
+      <div id="page" class="page" parallax-background parallax-ratio="0.1">
         <div ng-view=""></div>
       </div>
       <!--Page Content Close-->

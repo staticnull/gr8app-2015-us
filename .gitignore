@@ -7,4 +7,4 @@ atlassian-ide-plugin.xml
 *.ipr
 *.iml
 *.iws
-
+artifacts/*

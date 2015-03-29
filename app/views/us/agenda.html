@@ -1,0 +1,50 @@
+<section class="page-block">
+  <div class="container">
+    <h1>Agenda</h1>
+
+    <div class="container">
+      <div class="row agenda-days" >
+        <div class="col-xs-12 col-md-12">
+          <div class="btn-group agenda-days">
+            <a style="width: {{dayTabWidth}}%" ng-repeat="day in agenda" class="btn btn-primary {{activeDay(day.day)}}" ng-href="#/agenda/{{day.day}}">
+              {{dayTitle(day.day)}}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="agenda col-xs-12 col-md-12 pad-top-10">
+          <div class="agenda-times col-xs-2 col-md-1">
+            <div class="agenda-time"></div>
+            <div ng-repeat="hour in agendaHours">
+              {{hour}}:00
+            </div>
+            <break-icon ng-repeat="agendaItem in breaks.slots" item="agendaItem" start-hour="agendaHours[0]" color="track.color"></break-icon>
+          </div>
+          <div class="col-xs-10 col-md-11">
+            <div class="agenda-outer" style="height: {{agendaHeight}}px">
+              <div class="swipe small"><i class="fa fa-arrow-left"></i> swipe <i class="fa fa-arrow-right"></i> </div>
+              <div class="agenda-inner">
+                <agenda-track ng-repeat="track in agendaColumns">
+                  <div class="agenda-title">
+                    {{track.name}}
+                  </div>
+                  <div class="agenda-room">
+                    {{track.room}}
+                  </div>
+                  <agenda-item ng-repeat="agendaItem in track.slots" item="agendaItem" start-hour="agendaHours[0]" color="track.color"></agenda-item>
+                </agenda-track>
+                <div ng-repeat="track in allColumns" style="position:relative;height:100%;">
+                  <agenda-item ng-repeat="agendaItem in track.slots" item="agendaItem" start-hour="agendaHours[0]" color="track.color" room="track.room"></agenda-item>
+                </div>
+                <div style="position: relative; height: 100%">
+                  <break-item ng-repeat="agendaItem in breaks.slots" item="agendaItem" start-hour="agendaHours[0]" color="track.color"></break-item>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

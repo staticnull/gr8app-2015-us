@@ -2,14 +2,13 @@
   "ENV": "production",
   "CONFERENCE": {
     "id": 4,
-    "base": "eu",
+    "base": "us",
     "name": "GR8Conf US-2015",
     "contact": "info@gr8conf.us",
-    "blogUrl": "sbglasius.tumblr.com",
-    "blogApiKey": "7rXNPh2ZCj2xa12qknvyQyBl1foeXM9q9CThjcQyf3JsTqEZ1I"
+    "blogUrl": "gr8conf.tumblr.com",
+    "blogApiKey": ""
   },
   "API": {
-    "reload": true,
     "status": "http://cfp.gr8conf.org/api2/status/",
     "speakers": "http://cfp.gr8conf.org/api2/speakers/",
     "talks": "http://cfp.gr8conf.org/api2/talks/",

@@ -1,12 +1,12 @@
 {
   "CONFERENCE": {
-    "id": 3,
-    "base": "eu",
-    "name": "GR8Conf EU-2015",
-    "contact": "info@gr8conf.eu",
-    "blogUrl": "sbglasius.tumblr.com",
-    "blogApiKey": "7rXNPh2ZCj2xa12qknvyQyBl1foeXM9q9CThjcQyf3JsTqEZ1I",
-    "registrationUrl":"http://flexbillet.dk/gr8conf/event/43814266743758783807ecda53d26b40c417f64d07667f91"
+    "id": 4,
+    "base": "us",
+    "name": "GR8Conf US-2015",
+    "contact": "info@gr8conf.us",
+    "blogUrl": "gr8conf.tumblr.com",
+    "blogApiKey": "",
+    "registrationUrl":""
   },
   "API": {
     "reload": true,
@@ -49,4 +49,3 @@
     }
   ]
 }
-

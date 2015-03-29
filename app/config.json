@@ -7,9 +7,9 @@
             "constants": {
                 "ENV": "development",
                 "CONFERENCE": {
-                    "id": 1,
-                    "blogUrl": "sbglasius.tumblr.com",
-                    "blogApiKey": "7rXNPh2ZCj2xa12qknvyQyBl1foeXM9q9CThjcQyf3JsTqEZ1I"
+                    "id": 4,
+                    "blogUrl": "gr8conf.tumblr.com",
+                    "blogApiKey": ""
                 },
                 "FEATURES": {
                     "speakers": true,
@@ -49,9 +49,9 @@
             "constants": {
                 "ENV": "production",
                 "CONFERENCE": {
-                    "id": 1,
-                    "blogUrl": "gr8conf-eu.tumblr.com",
-                    "blogApiKey": "UIYScgdnpAoVWO2EdoADcGAZTAvukDsLEQpX4Zj5AVdL67P4c8"
+                    "id": 4,
+                    "blogUrl": "gr8conf.tumblr.com",
+                    "blogApiKey": ""
                 },
                 "FEATURES": {
                     "speakers": true,
